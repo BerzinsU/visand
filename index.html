@@ -1,79 +1,92 @@
 <!DOCTYPE html>
 
 <head>
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<link rel="stylesheet" href="/resources/demos/style.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
 
-	<style>
-  		#draggable { 
-  			width: 150px; 
-  			height: 150px; 
-  			padding: 0.5em; 
-  			background-image: url('http://placekitten.com/150/150');
-  			background-repeat:no-repeat;
-  			background-size: 100%;
-  		}
-
-
-  		#draggable2 { width: 250px; height: 150px; padding: 0.5em; }
-  		#draggable3 { width: 350px; height: 250px; padding: 0.5em; }
-		
-		#draggable4 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-		#droppable5 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
-		
-  	</style>
+  <style>
+      #draggable { 
+        width: 160px; 
+        height: 160px; 
+        padding: 0.5em; 
+        background-image: url('');
+        background-repeat:no-repeat;
+        background-size: 100%;
+      }
 
 
-  	<script>
-		$(function() {			
-			$( "#draggable" ).draggable({ snap: true }).resizable({ aspectRatio: true });;;
-			$( "#draggable2" ).draggable({ snap: true }).resizable({ aspectRatio: true });;
-			$( "#draggable3" ).draggable({ snap: true }).resizable({ aspectRatio: true });;
-						
-			 $(function() {
-				$( "#draggable4" ).draggable();
-				$( "#droppable5" ).droppable({
-					drop: function( event, ui ) {
-						$(this)
-							.addClass( "ui-state-highlight" )
-							.find( "p" )
-							.html( "Dropped!" );							
-						$(ui.draggable).remove();
-					}
-				});
-			});
-		});
-  	</script>
+      #draggable2 { width: 260px; height: 160px; padding: 0.5em; }
+      #draggable3 { width: 360px; height: 260px; padding: 0.5em; }
+    
+      #draggable4 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+      #droppable5 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+    
 
+
+      .sandbox {
+        border: solid 1px black;
+        margin: auto;
+        width: 80%;
+        height: 800px;
+      }
+
+
+    </style>
+
+
+    <script>
+    $(function() {      
+      $( "#draggable" ).draggable({ snap: true, containment: "parent", 
+        grid: [ 20,20 ] }).resizable({ aspectRatio: true, grid: 20});;;
+      $( "#draggable2" ).draggable({ snap: true, containment: "parent", 
+        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20 });;
+      $( "#draggable3" ).draggable({ snap: true, containment: "parent", 
+        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20 });;
+            
+       $(function() {
+        $( "#draggable4" ).draggable();
+        $( "#droppable5" ).droppable({
+          drop: function( event, ui ) {
+            $(this)
+              .addClass( "ui-state-highlight" )
+              .find( "p" )
+              .html( "Dropped!" );              
+            $(ui.draggable).remove();
+          }
+        });
+      });
+    });
+
+    </script>
 </head>
 
 <body>
-<div>
-	<h1>
-		VISAND
-	</h1>
-</div>
+  <div>
+    <h1>
+      VISAND
+    </h1>
+  </div>
 
-<div id="draggable" class="ui-widget-content">
-  <p>Kitchen</p>
-</div>
+  <div class="sandbox" id="containment-wrapper">
+    <div id="draggable" class="ui-widget-content">
+      <p>Kitchen</p>
+    </div>
 
-<div id="draggable2" class="ui-widget-content">
-  <p>Living room</p>
-</div>
+    <div id="draggable2" class="ui-widget-content" class="DragableClass">
+      <p>Living room</p>
+    </div>
 
-<div id="draggable3" class="ui-widget-content">
-  <p>Bedroom</p>
-</div>
+    <div id="draggable3" class="ui-widget-content">
+      <p>Bedroom</p>
+    </div>
+  </div>
 
-<div id="draggable4" class="ui-widget-content">
-<p>Drag me to my target</p>
-</div>
-<div id="droppable5" class="ui-widget-header">
-<p>Drop here</p>
-</div>
-
-
+  <div id="draggable4" class="ui-widget-content">
+    <p>Drag me to my target</p>
+  </div>
+  <div id="droppable5" class="ui-widget-header">
+    <p>Drop here</p>
+  </div>
 </body>
