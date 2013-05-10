@@ -18,16 +18,32 @@
 
 
   		#draggable2 { width: 250px; height: 150px; padding: 0.5em; }
-
   		#draggable3 { width: 350px; height: 250px; padding: 0.5em; }
+		
+		#draggable4 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+		#droppable5 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+		
   	</style>
 
 
   	<script>
 		$(function() {
-			$( "#draggable" ).draggable({ snap: true }).resizable();;;
-			$( "#draggable2" ).draggable({ snap: true }).resizable();;
-			$( "#draggable3" ).draggable({ snap: true }).resizable();;
+			$( "#draggable" ).draggable({ snap: true }).resizable();
+			$( "#draggable2" ).draggable({ snap: true }).resizable();
+			$( "#draggable3" ).draggable({ snap: true }).resizable();
+						
+			 $(function() {
+				$( "#draggable4" ).draggable();
+				$( "#droppable5" ).droppable({
+					drop: function( event, ui ) {
+						$(this)
+							.addClass( "ui-state-highlight" )
+							.find( "p" )
+							.html( "Dropped!" );							
+						$(ui.draggable).remove();
+					}
+				});
+			});
 		});
   	</script>
 
@@ -51,5 +67,13 @@
 <div id="draggable3" class="ui-widget-content">
   <p>Bedroom</p>
 </div>
+
+<div id="draggable4" class="ui-widget-content">
+<p>Drag me to my target</p>
+</div>
+<div id="droppable5" class="ui-widget-header">
+<p>Drop here</p>
+</div>
+
 
 </body>
