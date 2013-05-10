@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css" />
+
+	<style>
+  		#draggable { 
+  			width: 150px; 
+  			height: 150px; 
+  			padding: 0.5em; 
+  			background-image: url('http://placekitten.com/150/150');
+  			background-repeat:no-repeat;
+  			background-size: 100%;
+  		}
+
+
+  		#draggable2 { width: 250px; height: 150px; padding: 0.5em; }
+
+  		#draggable3 { width: 350px; height: 250px; padding: 0.5em; }
+  	</style>
+
+
+  	<script>
+		$(function() {
+			$( "#draggable" ).draggable({ snap: true }).resizable();;;
+			$( "#draggable2" ).draggable({ snap: true }).resizable();;
+			$( "#draggable3" ).draggable({ snap: true }).resizable();;
+		});
+  	</script>
+
+</head>
+
+<body>
+<div>
+	<h1>
+		VISAND
+	</h1>
+</div>
+
+<div id="draggable" class="ui-widget-content">
+  <p>Kitchen</p>
+</div>
+
+<div id="draggable2" class="ui-widget-content">
+  <p>Living room</p>
+</div>
+
+<div id="draggable3" class="ui-widget-content">
+  <p>Bedroom</p>
+</div>
+
+</body>
