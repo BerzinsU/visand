@@ -10,7 +10,7 @@ body
 	font-family: 'Roboto', sans-serif
 	line-height: 1.4
 
-#draggable
+#kitchen
 	width: 273px
 	height: 195px
 	background-image: url("../roomplans/dining.png")
@@ -55,7 +55,7 @@ body
 	top: 0
 	bottom: 0
 
-	div 
+	.drag 
 		@include transition-property(left, top)
 		@include transition-duration(0.05s)
 		overflow: hidden
@@ -76,7 +76,6 @@ body
 
 		.info 
 			text-align: center
-
 		&:hover
 			.info 
 				display: block

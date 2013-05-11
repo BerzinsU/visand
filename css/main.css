@@ -65,7 +65,7 @@ body {
   line-height: 1.4;
 }
 
-#draggable {
+#kitchen {
   width: 273px;
   height: 195px;
   background-image: url("../roomplans/dining.png");
@@ -116,7 +116,7 @@ body {
   top: 0;
   bottom: 0;
 }
-.sandbox div {
+.sandbox .drag {
   -webkit-transition-property: left, top;
   -moz-transition-property: left, top;
   -o-transition-property: left, top;
@@ -131,19 +131,19 @@ body {
   box-sizing: border-box;
   border: 1px solid gray;
 }
-.sandbox div img {
+.sandbox .drag img {
   display: block;
 }
-.sandbox div .ui-resizable, .sandbox div .ui-icon-gripsmall-diagonal-se, .sandbox div .ui-resizable-e, .sandbox div .ui-resizable-s, .sandbox div .SqMeter {
+.sandbox .drag .ui-resizable, .sandbox .drag .ui-icon-gripsmall-diagonal-se, .sandbox .drag .ui-resizable-e, .sandbox .drag .ui-resizable-s, .sandbox .drag .SqMeter {
   border: 0;
 }
-.sandbox div.ui-draggable-dragging {
+.sandbox .drag.ui-draggable-dragging {
   border: 1px solid red !important;
 }
-.sandbox div .info {
+.sandbox .drag .info {
   text-align: center;
 }
-.sandbox div:hover .info {
+.sandbox .drag:hover .info {
   display: block;
 }
 

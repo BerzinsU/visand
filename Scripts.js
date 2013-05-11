@@ -13,8 +13,18 @@
       var $sandbox = $( "#sandbox" );
        
           // let the gallery items be draggable
-          $( ".drag", $sandbox ).draggable({ cursor: "move", snap: true, containment: "parent", 
-        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
+          $( ".drag", $sandbox )
+          .draggable({
+            cursor: "move",
+            snap: true,
+            containment: "parent",
+            grid: [ 20,20 ]
+          }).resizable({
+            aspectRatio: true,
+            grid: 20,
+            resize: function( event, ui ){
+              resizedBlock(event, ui)
+            }});
 
         $( "#draggable4" ).draggable({cursor: "move"});
         var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
@@ -34,15 +44,17 @@
 
     });
 
+    var SqSumma = 0.0;
 
     function resizedBlock(s, e)
     {
-      var SqSumma = 0.0;
+
       s.value;
+
       var sqPixels = e.size.height * e.size.width;
       var master = document.getElementById(e.element[0].id);
 
-         var SqMeter =  master.getElementsByClassName('SqMeter');
+      var SqMeter =  master.getElementsByClassName('SqMeter');
 
         [].slice.call( SqMeter ).forEach(function ( div ) {
             div.innerHTML = (sqPixels * 0.0001).toFixed(2) + " m<sup>2</sup>";
@@ -60,6 +72,5 @@
 	function setDrag(d) {
 			d.draggable({ 
 				cursor: "move", snap: true, containment: "parent", 
-				grid: [ 39,39 ] }).resizable({ aspectRatio: true,  grid: 39, resize: function( event, ui ){resizedBlock(event, ui)} });
-			
+				grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
 		}
