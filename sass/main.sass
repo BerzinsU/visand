@@ -63,7 +63,7 @@ body
 		@include transition-property(left, top)
 		@include transition-duration(0.05s)
 		overflow: hidden
-		border: 1px solid gray
+		border: 1px solid #333333
 
 
 		img 
@@ -105,6 +105,7 @@ body
 	top: 20px
 	bottom: 15px
 	@include border-radius(4px)
+	// overflow: auto
 
 	.inside
 		padding: 25px
@@ -115,14 +116,14 @@ body
 
 	#logo 
 		display: block
-		margin-bottom: 50px
+		margin-bottom: 25px
 
 	.summary
 		overflow: hidden 
 		clear: both 
 		margin: 25px
 		padding-top: 25px
-		border-top: 1px solid gray
+		border-top: 1px solid #333333
 
 		span 
 			color: white
@@ -138,8 +139,10 @@ body
 			display: block
 			height: 50px
 			line-height: 50px
-			background-color: #36c3a4
+			background-color: #2fa88e
 			@include border-radius(4px)
+			@include transition-property(bac)
+			@include transition-duration(0.20s)
 			width: auto
 			text-align: center
 			color: white
@@ -147,6 +150,9 @@ body
 			font-size: 14px
 			font-weight: bold
 			margin-top: 40px
+
+			&:hover
+				background-color: #36c3a4
 
 	#controls
 		margin-top: 20px
@@ -226,4 +232,11 @@ body
 	&.deleting
 		background-color: red
 		@include border-radius(4px)
+
+.viewPane
+	background-color: transparent
+	width: 5000px
+	height: 5000px
+	margin-left: -2500px
+	margin-top: -2500px
 

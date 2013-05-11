@@ -127,7 +127,7 @@ body {
   -o-transition-duration: 0.05s;
   transition-duration: 0.05s;
   overflow: hidden;
-  border: 1px solid gray;
+  border: 1px solid #333333;
 }
 .sandbox .drag img {
   display: block;
@@ -191,14 +191,14 @@ body {
 }
 .Menu #logo {
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .Menu .summary {
   overflow: hidden;
   clear: both;
   margin: 25px;
   padding-top: 25px;
-  border-top: 1px solid gray;
+  border-top: 1px solid #333333;
 }
 .Menu .summary span {
   color: white;
@@ -214,12 +214,20 @@ body {
   display: block;
   height: 50px;
   line-height: 50px;
-  background-color: #36c3a4;
+  background-color: #2fa88e;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  -webkit-transition-property: bac;
+  -moz-transition-property: bac;
+  -o-transition-property: bac;
+  transition-property: bac;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
   width: auto;
   text-align: center;
   color: white;
@@ -227,6 +235,9 @@ body {
   font-size: 14px;
   font-weight: bold;
   margin-top: 40px;
+}
+.Menu .summary a.share:hover {
+  background-color: #36c3a4;
 }
 .Menu #controls {
   margin-top: 20px;
@@ -321,4 +332,12 @@ body {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+}
+
+.viewPane {
+  background-color: transparent;
+  width: 5000px;
+  height: 5000px;
+  margin-left: -2500px;
+  margin-top: -2500px;
 }
