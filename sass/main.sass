@@ -10,7 +10,7 @@ body
 	font-family: 'Roboto', sans-serif
 	line-height: 1.4
 
-#draggable
+#kitchen
 	width: 273px
 	height: 195px
 	background-image: url("../roomplans/dining.png")
@@ -55,7 +55,7 @@ body
 	top: 0
 	bottom: 0
 
-	div 
+	.drag 
 		@include transition-property(left, top)
 		@include transition-duration(0.05s)
 		overflow: hidden
@@ -76,8 +76,6 @@ body
 
 		.info 
 			text-align: center
-			display: none
-
 		&:hover
 			.info 
 				display: block
@@ -91,6 +89,10 @@ body
 	top: 0
 	bottom: 0
 
+	h2 
+		color: white
+		margin: 15px
+
 	.summary
 		position: absolute
 		bottom: 15px
@@ -100,13 +102,42 @@ body
 			color: white
 
 	#controls
+		margin-top: -20px
 
 	.button
 		color: white
-		padding: 10px 
-		border: 1px solid white
-		cursor: pointer 
-		margin: 15px
+		cursor: pointer
+		width: 100px
+		text-align: center
+		float: left
+		margin-top: 20px
+
+		span 
+			background-image: url("../images/sprites.png")
+			width: 40px
+			height: 40px
+			overflow: hidden
+			background-repeat: no-repeat
+			display: inline-block
+
+		p 
+			font-size: 14px
+
+		&.add-kitchen
+			span
+				background-position: -40px 0px
+
+		&.add-livingroom
+			span
+				background-position: 0px 0px
+
+		&.add-bathroom
+			span
+				background-position: 0px -40px
+
+		&.add-custom
+			span
+				background-position: -40px -40px
 
 		&:active 
 			background-color: red
@@ -124,3 +155,14 @@ body
 	right: 15px
 	width: 60px 
 	height: 60px
+
+.table
+	display: table
+	width: 100%
+	height: 100%
+
+.table-cell
+	display: table-cell
+	width: 100%
+	height: 100%
+	vertical-align: middle
