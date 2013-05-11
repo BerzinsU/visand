@@ -22,14 +22,16 @@
      
       $( "#draggable6" ).draggable({ cursor: "move", snap: true, containment: "parent", 
         grid: [ 20,20 ] });
-		
-		
-		$("#add_kitchen").click(function() {
-			$elem = $( "#kitchen" ).clone();
-			$elem.removeClass("hideme");
-			setDrag($elem);
-			$elem.appendTo("#sandbox");
+				
+		$(".add-kitchen").click(function() {
+			addRoom("draggable", "Kitchen", "kitchen");			
 		});
+		
+		$(".add-livingroom").click(function() {
+			addRoom("draggable2", "Living room", "living-room");			
+		});
+		
+		
 		
 
     });
@@ -63,3 +65,12 @@
 				grid: [ 39,39 ] }).resizable({ aspectRatio: true,  grid: 39, resize: function( event, ui ){resizedBlock(event, ui)} });
 			
 		}
+		
+	function addRoom(dragable, name, id) {
+		var room = "<div id='"+ dragable +"' class='drag ui-widget-content'> <div class='info'> <p>"+ name +"</p> <p class='SqMeter' id='"+ id +"'>00</p> <div></div> </div> </div>";
+				
+				$("#sandbox").append(room);
+				
+		$( ".drag", $( "#sandbox" ) ).draggable({ cursor: "move", snap: true, containment: "parent", 
+        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
+	}
