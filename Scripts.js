@@ -1,5 +1,3 @@
- 
-
  $(function() {     
 
       var $droppable5 = $( "#droppable5" );
@@ -9,15 +7,15 @@
       var $sandbox = $( "#sandbox" );
        
           // let the gallery items be draggable
-          $( "div", $sandbox ).draggable({ cursor: "move", snap: true, containment: "parent", 
-        grid: [ 39,39 ] }).resizable({ aspectRatio: true,  grid: 39, resize: function( event, ui ){resizedBlock(event, ui)} });
+          $( "div", $sandbox ).draggable({ cursor: "move", obstacle: ".obstacle", preventCollision: true , snap: true, containment: "parent", 
+        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
 
         $( "#draggable4" ).draggable({cursor: "move"});
         var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
     
      
       $( "#draggable6" ).draggable({ cursor: "move", snap: true, containment: "parent", 
-        grid: [ 39,39 ] });;
+        grid: [ 20,20 ] });;
             
 
     });

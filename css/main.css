@@ -68,7 +68,8 @@ body {
   height: 195px;
   background-image: url("../roomplans/kitchen.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-position: 0px 0px;
 }
 
 #draggable2 {
@@ -112,12 +113,8 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: url("../roomplans/grid.png");
 }
 .sandbox div {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-transition-property: left, top;
   -moz-transition-property: left, top;
   -o-transition-property: left, top;
@@ -126,13 +123,16 @@ body {
   -moz-transition-duration: 0.1s;
   -o-transition-duration: 0.1s;
   transition-duration: 0.1s;
-  border: 1px solid black;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid gray;
 }
 .sandbox div img {
   display: block;
 }
-.sandbox div .ui-icon-gripsmall-diagonal-se {
+.sandbox div .ui-resizable, .sandbox div .ui-icon-gripsmall-diagonal-se, .sandbox div .ui-resizable-e, .sandbox div .ui-resizable-s {
   border: 0;
 }
 
