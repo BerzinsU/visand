@@ -156,6 +156,10 @@ body {
   top: 0;
   bottom: 0;
 }
+.Menu h2 {
+  color: white;
+  margin: 15px;
+}
 .Menu .summary {
   position: absolute;
   bottom: 15px;
@@ -164,12 +168,39 @@ body {
 .Menu .summary span {
   color: white;
 }
+.Menu #controls {
+  margin-top: -20px;
+}
 .Menu .button {
   color: white;
-  padding: 10px;
-  border: 1px solid white;
   cursor: pointer;
-  margin: 15px;
+  width: 100px;
+  text-align: center;
+  float: left;
+  margin-top: 20px;
+}
+.Menu .button span {
+  background-image: url("../images/sprites.png");
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.Menu .button p {
+  font-size: 14px;
+}
+.Menu .button.add-kitchen span {
+  background-position: -40px 0px;
+}
+.Menu .button.add-livingroom span {
+  background-position: 0px 0px;
+}
+.Menu .button.add-bathroom span {
+  background-position: 0px -40px;
+}
+.Menu .button.add-custom span {
+  background-position: -40px -40px;
 }
 .Menu .button:active {
   background-color: red;
