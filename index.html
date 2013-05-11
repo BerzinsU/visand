@@ -4,6 +4,7 @@
     <head>
 
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/main.css" />
 
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -19,33 +20,40 @@
             <!-- Menu -->
             <div class="Menu">
 
-                <div class="summary">
-                    <div class="SqSum" id="SqSum">00</div>
-                    <div class="TotalPrice" id="TotalPrice">00</div>
+                <div id="controls">
+                    <div class="button add-kitchen">add kitchen</div>
+                    <div class="button add-livingroom">add living room</div>
                 </div>
-				
-				<div id="add_kitchen">
-					add kitchen
-				</div>
-                
+
+                <div class="summary">
+                    <span class="SqSum" id="SqSum">00</span>
+                    <span class="TotalPrice" id="TotalPrice">00</span>
+                </div>
+
             </div>
 
             <!-- Sandbox -->
             <div class="sandbox" id="sandbox">
 
-                <!--div id="draggable" class="drag ui-widget-content">
-                    <p>Kitchen</p>
-                    <div class="SqMeter" id="Kitchen">00</div>
+                <div id="draggable" class="drag ui-widget-content">
+                    <div class="info">
+                        <p>Kitchen</p>
+                        <p class="SqMeter" id="Kitchen">00</p>
+                    </div>
                 </div>
 
                 <div id="draggable2" class="drag ui-widget-content">
-                    <p>Kitchen</p>
-                    <div class="SqMeter" id="Kitchen">00</div>
+                    <div class="info">
+                        <p>Kitchen</p>
+                        <p class="SqMeter" id="Kitchen">00</p>
+                    </div>
                 </div>
 
                 <div id="draggable3" class="drag ui-widget-content">
-                    <p>Kitchen</p>
-                    <div class="SqMeter" id="Kitchen">00</div>
+                    <div class="info">
+                        <p>Kitchen</p>
+                        <p class="SqMeter" id="Kitchen">00</p>
+                    </div>
                 </div>
 				
 				<div class="trash ui-widget-content">

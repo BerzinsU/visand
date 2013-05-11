@@ -6,12 +6,14 @@ html, body
 	height: 100%
 
 body 
-	background-color: white
+	background-color: #f2f2f2
+	font-family: 'Roboto', sans-serif
+	line-height: 1.4
 
 #draggable
 	width: 273px
 	height: 195px
-	background-image: url("../roomplans/kitchen.png")
+	background-image: url("../roomplans/dining.png")
 	background-repeat: no-repeat
 	background-size: 100%
 	background-position: 0px  0px
@@ -55,7 +57,7 @@ body
 
 	div 
 		@include transition-property(left, top)
-		@include transition-duration(0.10s)
+		@include transition-duration(0.05s)
 		overflow: hidden
 		-webkit-box-sizing: border-box
 		-moz-box-sizing: border-box
@@ -66,9 +68,19 @@ body
 		img 
 			display: block
 
-		.ui-resizable, .ui-icon-gripsmall-diagonal-se, .ui-resizable-e, .ui-resizable-s
+		.ui-resizable, .ui-icon-gripsmall-diagonal-se, .ui-resizable-e, .ui-resizable-s, .SqMeter
 			border: 0
 
+		&.ui-draggable-dragging
+			border: 1px solid red !important
+
+		.info 
+			text-align: center
+			display: none
+
+		&:hover
+			.info 
+				display: block
 
 .Menu
 	width: 250px
@@ -80,7 +92,24 @@ body
 	bottom: 0
 
 	.summary
-		padding: 15px
+		position: absolute
+		bottom: 15px
+		left: 15px
+
+		span 
+			color: white
+
+	#controls
+
+	.button
+		color: white
+		padding: 10px 
+		border: 1px solid white
+		cursor: pointer 
+		margin: 15px
+
+		&:active 
+			background-color: red
 
 .SqMeter
 	float: left
@@ -88,3 +117,10 @@ body
 #wrapper
 	position: relative
 	height: 100%
+
+.trash 
+	position: absolute
+	bottom: 15px 
+	right: 15px
+	width: 60px 
+	height: 60px
