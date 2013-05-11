@@ -1,7 +1,18 @@
 
 var sizeCoificient = 0.0004;
 
-	 $(function() {     
+	 $(function() { 
+
+		$("a.share").click(function(){
+			$("#send-project").fadeIn("fast");
+			// console.log("works");
+			return false;
+		});
+
+		$("#send-project").find(".close").click(function()
+		{
+			$("#send-project").fadeOut();
+		});
 
 		 var $sandbox = $( "#sandbox" );
 		   
@@ -21,7 +32,7 @@ var sizeCoificient = 0.0004;
 		var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
 
 
-		$( ".viewPane").draggable({cursor: "move"});
+		$( ".viewPane").draggable({cursor: "move", grid: [ 20,20 ] });
 				
 		$(".add-kitchen").click(function() {
 			addRoom("Kitchen", "kitchen");			
@@ -40,13 +51,14 @@ var sizeCoificient = 0.0004;
 		});
 
 		
-		$( ".trash" ).droppable({
-      hoverClass: "deleting",       
+		$(".trash" ).droppable({
+      		hoverClass: "deleting",       
 			tolerance: "touch", 
 			drop: function( event, ui ) {			
       if(ui.draggable[0].id != "viewPane")			
       {	
 				$(ui.draggable).remove();
+        CalculateWholeSum();
       }
 			}
 		});
@@ -80,7 +92,7 @@ var sizeCoificient = 0.0004;
             SqSumma = SqSumma + parseFloat(div.innerHTML);
         });
         document.getElementById('SqSum').innerHTML = "Total m<sup>2</sup>: " + SqSumma.toFixed(2);
-        document.getElementById('TotalPrice').innerHTML = "Total price:" + (SqSumma * 1000).toFixed(2) + "Eur";
+        document.getElementById('TotalPrice').innerHTML = "Total price: " + (SqSumma * 1000).toFixed(2) + " Eur";
     };
 
     function getBoxSizes(){
@@ -128,8 +140,11 @@ var sizeCoificient = 0.0004;
 
 	function CalculateWholeSum()
     {
-
       getBoxSizes();
       CalculateSum();
     }
-	
+
+    var element = document.getElementById('send-project');
+    var hammertime = Hammer(element).on("tap", function(event) {
+        alert('hello!');
+    });
