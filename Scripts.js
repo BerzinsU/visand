@@ -1,4 +1,11 @@
  $(function() {     
+		$(".trash").droppable({
+			tolerance: "pointer", 
+			drop: function( event, ui ) {
+				alert(1);
+				$(ui.draggable).remove();
+			},
+		});
 
       var $droppable5 = $( "#droppable5" );
 
@@ -7,7 +14,7 @@
       var $sandbox = $( "#sandbox" );
        
           // let the gallery items be draggable
-          $( "div", $sandbox ).draggable({ cursor: "move", obstacle: ".obstacle", preventCollision: true , snap: true, containment: "parent", 
+          $( ".drag", $sandbox ).draggable({ cursor: "move", snap: true, containment: "parent", 
         grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
 
         $( "#draggable4" ).draggable({cursor: "move"});
@@ -15,8 +22,9 @@
     
      
       $( "#draggable6" ).draggable({ cursor: "move", snap: true, containment: "parent", 
+        grid: [ 39,39 ] });
         grid: [ 20,20 ] });;
-            
+		
 
     });
 

@@ -36,6 +36,7 @@
         margin: auto;
         width: 80%;
         height: 800px;
+		position: relative;
       }
 
       .Menu{
@@ -46,3 +47,13 @@
 
         float: left;
       }
+	  
+	  .trash {
+        width: 100px; 
+        height: 100px; 
+		
+		position: absolute;
+        bottom: 0px;
+		right: 0px;
+		background-color: blue;
+	  }
