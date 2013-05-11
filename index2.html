@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="http://jqueryrotate.googlecode.com/files/jQueryRotate.2.2.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css" />
+
+	<style>
+		.dclass {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+		}
+		.hid {
+			display: none;
+		}
+  		#draggable { 
+  			width: 160px; 
+  			height: 160px; 
+  			padding: 0.5em; 
+  			background-image: url('http://placekitten.com/150/150');
+  			background-repeat:no-repeat;
+  			background-size: 100%;
+  		}
+
+
+  		#draggable2 { width: 250px; height: 150px; padding: 0.5em; }
+  		#draggable3 { width: 350px; height: 250px; padding: 0.5em; }
+		
+		#draggable4 { 
+			width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; 
+			}
+		#droppable5 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+		
+  	</style>
+
+
+  	<script>
+		$(function() {						
+				//$( "#draggable" ).draggable({ snap: true, grid: [ 50, 20 ] }).resizable({ aspectRatio: true });
+				
+				setDrag($( "#draggable" ));
+				
+				$( "#droppable" ).droppable({
+					tolerance: "pointer", 
+					drop: function( event, ui ) {							
+						$(ui.draggable).remove();
+					},
+				});
+				
+				$( "#droppable" ).mousedown(function(e) {
+					$elem = $( "#draggable" ).clone();
+					$elem.removeClass("hid");
+					setDrag($elem);
+					$elem.appendTo("body");
+					//$elem.css({left:10,top:10,position:absolute;});
+					$elem.click(function(e) {
+						$angle = 0;
+						if($(this).getRotateAngle() != 0) {
+							$angle = $(this).getRotateAngle()[0];
+						}
+						$(this).rotate(90 + $angle);
+					});
+				});
+		});
+		
+		function setDrag(d) {
+			d.draggable({ snap: true, grid: [ 20, 20 ] }).resizable({ aspectRatio: true });
+			
+		}
+  	</script>
+
+</head>
+
+<body>
+<div>
+	<h1>
+		VISAND
+	</h1>
+</div>
+
+<div id="draggable" class="ui-widget-content hid">
+<p>Drag me to my target</p>
+</div>
+<div id="droppable" class="ui-widget-header">
+<p>Drop to delete, Click to create</p>
+</div>
+
+
+</body>
