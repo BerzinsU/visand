@@ -1,56 +1,51 @@
 <!DOCTYPE html>
+<html>
 
-<head>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css" />
-  <script src="Scripts.js"></script>
-  <link rel="stylesheet" href="Styles.css"/>
+    <head>
 
-  <style>
-      
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="css/main.css" />
 
-    </style>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="Scripts.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Menu -->
+            <div class="Menu">
 
 
-    <script>
+                <div class="SqSum" id="SqSum">00</div>
+                <div class="TotalPrice" id="TotalPrice">00</div>
 
+            </div>
 
-   
-    </script>
-</head>
+            <!-- Sandbox -->
+            <div class="sandbox" id="sandbox">
 
-<body>
-  <div>
-    <h1>
-      VISAND
-    </h1>
-  </div>
+                <div id="draggable" class="ui-widget-content">
+                    <p>Kitchen</p>
+                    <div class="SqMeter" id="Kitchen">00</div>
+                </div>
 
-  <div id="droppable5" class="Menu">
-        <p>Menu</p>
-    </div>
+                <div id="draggable2" class="ui-widget-content" class="DragableClass">
+                    <p>Living room</p>
+                    <div class="SqMeter" id="Kitchen">00</div>
+                </div>
 
-  <div class="sandbox" id="sandbox">
+                <div id="draggable3" class="ui-widget-content">
+                    <p>Bedroom</p>
+                    <div class="SqMeter" id="Kitchen">00</div>
+                </div>
 
-    <div id="draggable" class="ui-widget-content">
-      <p>Kitchen</p>
-      <div class="SqMeter" id="Kitchen">00</div>
-    </div>
+            </div>
 
-    <div id="draggable2" class="ui-widget-content" class="DragableClass">
-      <p>Living room</p>
-      <div class="SqMeter" id="Kitchen">00</div>
-    </div>
+        </div>
 
-    <div id="draggable3" class="ui-widget-content">
-      <p>Bedroom</p>
-      <div class="SqMeter" id="Kitchen">00</div>
-    </div>
-  </div>
-
-  <div class="SqSum" id="SqSum">00</div>
-  <div class="TotalPrice" id="TotalPrice">00</div>
-
-</body>
+    </body>
+</html>
