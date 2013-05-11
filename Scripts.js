@@ -21,7 +21,7 @@ var sizeCoificient = 0.0004;
 		var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
 
 
-		$( ".viewPane").draggable({cursor: "move"});
+		$( ".viewPane").draggable({cursor: "move", grid: [ 20,20 ] });
 				
 		$(".add-kitchen").click(function() {
 			addRoom("Kitchen", "kitchen");			
