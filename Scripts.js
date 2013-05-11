@@ -99,6 +99,13 @@
 		
 		$( ".draggable").each(function() {
 			setDrag($(this));
+			$(this).click(function(e) {
+				$angle = 0;
+				if($(this).getRotateAngle() != 0) {
+					$angle = $(this).getRotateAngle()[0];
+				}
+				$(this).rotate(90 + $angle);
+			});
 		});
 	}
 
