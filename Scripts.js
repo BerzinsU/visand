@@ -1,4 +1,5 @@
 
+var sizeCoificient = 0.0004;
 
 	 $(function() {     
 
@@ -20,7 +21,7 @@
 		var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
 
 
-		$( ".infiniteSandbox").draggable({cursor: "move"});
+		$( ".viewPane").draggable({cursor: "move"});
 				
 		$(".add-kitchen").click(function() {
 			addRoom("Kitchen", "kitchen");			
@@ -37,8 +38,11 @@
 		
 		$( ".trash" ).droppable({
 			tolerance: "touch", 
-			drop: function( event, ui ) {							
+			drop: function( event, ui ) {			
+      if(ui.draggable[0].id != "viewPane")			
+      {	
 				$(ui.draggable).remove();
+      }
 			},
 		});
 
@@ -56,7 +60,7 @@
          var SqMeter =  master.getElementsByClassName('SqMeter');
 
         [].slice.call( SqMeter ).forEach(function ( div ) {
-            div.innerHTML = (sqPixels * 0.0004).toFixed(2) + " m<sup>2</sup>";
+            div.innerHTML = (sqPixels * sizeCoificient).toFixed(2) + " m<sup>2</sup>";
         });
 
         CalculateSum();
@@ -77,8 +81,8 @@
     function getBoxSizes(){
       var SumFields = document.getElementsByClassName('draggable');
         [].slice.call( SumFields ).forEach(function ( div ) {
-            div.children[0].children[0].children[0].children[1].innerHTML = 
-            ((div.clientHeight * div.clientWidth)* 0.0004).toFixed(2)+ " m<sup>2</sup>";;
+            div.children[0].children[0].children[0].children[0].children[1].innerHTML = 
+            ((div.clientHeight * div.clientWidth)* sizeCoificient).toFixed(2)+ " m<sup>2</sup>";;
         });
     }
 	
@@ -89,7 +93,7 @@
 	}
 		
 	function addRoom(name, id) {
-		var room = "<div id='"+ id +"' class='drag ui-widget-content draggable'> \
+		var room = "<div id='"+ id +"' class='drag ui-widget-content draggable' style='position:relative; left:2510px; top:2510px; float:left;'> \
 		<div class='info'> \
 			<div class='table'> \
 				<div class='table-cell'>\
@@ -100,7 +104,7 @@
 			</div>\
 		</div>";
 		
-		$("#sandbox").append(room);
+		$("#viewPane").append(room);
 		
 		$( ".draggable").each(function() {
 			setDrag($(this));
