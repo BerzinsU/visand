@@ -2,7 +2,6 @@
 		$(".trash").droppable({
 			tolerance: "touch", 
 			drop: function( event, ui ) {
-				alert(1);
 				$(ui.draggable).remove();
 			},
 		});
@@ -23,6 +22,14 @@
      
       $( "#draggable6" ).draggable({ cursor: "move", snap: true, containment: "parent", 
         grid: [ 20,20 ] });
+		
+		
+		$("#add_kitchen").click(function() {
+			$elem = $( "#kitchen" ).clone();
+			$elem.removeClass("hideme");
+			setDrag($elem);
+			$elem.appendTo("#sandbox");
+		});
 		
 
     });
@@ -48,3 +55,11 @@
         document.getElementById('SqSum').innerHTML = "Total m<sup>2</sup>: " + SqSumma.toFixed(2);
         document.getElementById('TotalPrice').innerHTML = "Total price:" + (SqSumma * 1000).toFixed(2) + "Eur";
     }
+	
+	
+	function setDrag(d) {
+			d.draggable({ 
+				cursor: "move", snap: true, containment: "parent", 
+				grid: [ 39,39 ] }).resizable({ aspectRatio: true,  grid: 39, resize: function( event, ui ){resizedBlock(event, ui)} });
+			
+		}
