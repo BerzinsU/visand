@@ -93,7 +93,7 @@ var sizeCoificient = 0.0004;
 	
 	
 	function setDrag(d) {
-		d.draggable({ cursor: "move", snap: true, containment: "parent", 
+		d.draggable({ cursor: "move", snap: true, containment: "#sandbox", 
 			grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
 	}
 		
