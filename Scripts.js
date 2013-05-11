@@ -25,6 +25,15 @@
             resize: function( event, ui ){
               resizedBlock(event, ui)
             }});
+			
+			$("#kitchen").click(function(e) {
+				alert(1);
+				$angle = 0;
+				if($(this).getRotateAngle() != 0) {
+					$angle = $(this).getRotateAngle()[0];
+				}
+				$(this).rotate(90 + $angle);
+			});
 
         $( "#draggable4" ).draggable({cursor: "move"});
         var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
@@ -80,8 +89,8 @@
 	function addRoom(dragable, name, id) {
 		var room = "<div id='"+ dragable +"' class='drag ui-widget-content'> <div class='info'> <p>"+ name +"</p> <p class='SqMeter' id='"+ id +"'>00</p> <div></div> </div> </div>";
 				
-				$("#sandbox").append(room);
-				
+		$("#sandbox").append(room);				
 		$( ".drag", $( "#sandbox" ) ).draggable({ cursor: "move", snap: true, containment: "parent", 
-        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
+        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });		
+		
 	}
