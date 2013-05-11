@@ -70,7 +70,8 @@ body {
   height: 195px;
   background-image: url("../roomplans/dining.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-position: 0px 0px;
 }
 
 #draggable2 {
@@ -114,12 +115,8 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: url("../roomplans/grid.png");
 }
 .sandbox div {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-transition-property: left, top;
   -moz-transition-property: left, top;
   -o-transition-property: left, top;
@@ -128,8 +125,11 @@ body {
   -moz-transition-duration: 0.05s;
   -o-transition-duration: 0.05s;
   transition-duration: 0.05s;
-  border: 1px solid black;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid gray;
 }
 .sandbox div img {
   display: block;
@@ -143,9 +143,6 @@ body {
 .sandbox div .info {
   text-align: center;
   display: none;
-}
-.sandbox div .info span {
-  display: inline-block;
 }
 .sandbox div:hover .info {
   display: block;
