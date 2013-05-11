@@ -57,6 +57,7 @@ body
 	right: 0
 	top: 0
 	bottom: 0
+	overflow: hidden
 
 	.drag 
 		@include transition-property(left, top)
@@ -97,12 +98,12 @@ body
 				background-image: url("../images/trans.png")
 
 .Menu
-	width: 250px
+	width: 259px
 	background-image: url("../images/menu-bg.png")
 	position: absolute
-	left: 25px
-	top: 25px
-	bottom: 25px
+	left: 20px
+	top: 20px
+	bottom: 15px
 	@include border-radius(4px)
 
 	.inside
@@ -219,4 +220,10 @@ body
 	background-position: 0px -80px
 	background-color: transparent
 	border: 0px
+	@include transition-property(background-color)
+	@include transition-duration(0.20s)
+
+	&.deleting
+		background-color: red
+		@include border-radius(4px)
 

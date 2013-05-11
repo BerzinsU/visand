@@ -37,6 +37,7 @@
 		
 		$( ".trash" ).droppable({
 			tolerance: "touch", 
+			hoverClass: "deleting",
 			drop: function( event, ui ) {							
 				$(ui.draggable).remove();
 			},

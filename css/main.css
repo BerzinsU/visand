@@ -115,6 +115,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
+  overflow: hidden;
 }
 .sandbox .drag {
   -webkit-transition-property: left, top;
@@ -169,12 +170,12 @@ body {
 }
 
 .Menu {
-  width: 250px;
+  width: 259px;
   background-image: url("../images/menu-bg.png");
   position: absolute;
-  left: 25px;
-  top: 25px;
-  bottom: 25px;
+  left: 20px;
+  top: 20px;
+  bottom: 15px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -304,4 +305,20 @@ body {
   background-position: 0px -80px;
   background-color: transparent;
   border: 0px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.trash.deleting {
+  background-color: red;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
