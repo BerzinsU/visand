@@ -44,7 +44,7 @@
 
     function resizedBlock(s, e)
     {
-      
+      SqSumma = 0.0;
       s.value;
       var sqPixels = e.size.height * e.size.width;
       var master = document.getElementById(e.element[0].id);
