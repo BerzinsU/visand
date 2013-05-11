@@ -142,6 +142,10 @@ body {
 }
 .sandbox .drag .info {
   text-align: center;
+  height: 100%;
+}
+.sandbox .drag .info span {
+  display: block;
 }
 .sandbox .drag:hover .info {
   display: block;
