@@ -4,6 +4,7 @@
 html, body
 	width: 100%
 	height: 100%
+	background-image: url("../images/grid.png")
 
 body 
 	background-color: #f2f2f2
@@ -12,46 +13,47 @@ body
 	letter-spacing: 0.1em
 
 #kitchen
-	width: 273px
-	height: 195px
+	width: 200px
+	height: 200px
 	background-image: url("../roomplans/dining.png")
 	background-repeat: no-repeat
 	background-size: 100%
 	background-position: 0px  0px
+	background-color: transparent
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
 
-#draggable2
-	width: 273px
-	height: 195px
+#living-room
+	width: 300px
+	height: 200px
 	background-image: url("../roomplans/LIVINGROOM_FULL.png")
+	background-size: 100%
 	background-repeat: no-repeat
-	background-size: cover
+	background-position: 0px  0px
+	background-color: transparent
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
 
-#draggable3
-	width: 273px
-	height: 195px
-	background-image: url("../roomplans/BEDROOM_FULL_2.png")
+#bathroom
+	width: 125px
+	height: 125px
+	background-image: url("../roomplans/BATHROOM_2.png")
 	background-repeat: no-repeat
-	background-size: cover
-
-#draggable4
-	width: 100px
-	height: 100px
-
-#droppable5
-	width: 150px
-	height: 150px
-
-#draggable6
-	width: 60px
-	height: 20px
+	background-size: 100%
+	background-position: 0px  0px
+	background-color: transparent
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
 
 .sandbox
-	background-color: #fefefe
 	width: auto
 	height: 100%
 	overflow: auto
 	position: absolute
-	left: 250px
+	left: 299px
 	right: 0
 	top: 0
 	bottom: 0
@@ -60,9 +62,6 @@ body
 		@include transition-property(left, top)
 		@include transition-duration(0.05s)
 		overflow: hidden
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
 		border: 1px solid gray
 
 
@@ -78,22 +77,33 @@ body
 		.info 
 			text-align: center
 			height: 100%
+			@include opacity(0)
+			@include transition-property(opacity)
+			@include transition-duration(0.20s)
+			-webkit-backface-visibility: hidden
+			-moz-backface-visibility: hidden
+			-ms-backface-visibility: hidden
 
-			span 
+			p
 				display: block
+				font-size: 14px 
+				clear: both
 
+				&:first-child 
+					font-weight: bold
 		&:hover
 			.info 
-				display: block
+				@include opacity(1)
+				background-image: url("../images/trans.png")
 
 .Menu
 	width: 250px
-	height: 100%
-	background-color: #333
+	background-image: url("../images/menu-bg.png")
 	position: absolute
-	left: 0
-	top: 0
-	bottom: 0
+	left: 25px
+	top: 25px
+	bottom: 25px
+	@include border-radius(4px)
 
 	.inside
 		padding: 25px
@@ -133,7 +143,6 @@ body
 			text-align: center
 			color: white
 			text-decoration: none
-			text-transform: uppercase
 			font-size: 14px
 			font-weight: bold
 			margin-top: 40px
@@ -183,9 +192,6 @@ body
 		&:hover 
 			opacity: 0.7
 
-.SqMeter
-	float: left
-
 #wrapper
 	position: relative
 	height: 100%
@@ -211,5 +217,6 @@ body
 	background-image: url("../images/sprites.png")
 	background-repeat: no-repeat
 	background-position: 0px -80px
+	background-color: transparent
 	border: 0px
 
