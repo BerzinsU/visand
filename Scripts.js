@@ -37,18 +37,14 @@ var sizeCoificient = 0.0004;
 		
 		
 		$( ".trash" ).droppable({
+      hoverClass: "deleting",       
 			tolerance: "touch", 
-<<<<<<< HEAD
 			drop: function( event, ui ) {			
       if(ui.draggable[0].id != "viewPane")			
       {	
-=======
-			hoverClass: "deleting",
-			drop: function( event, ui ) {							
->>>>>>> 102f01c42c488eda7cd7cc823b0fcf9b90b6a463
 				$(ui.draggable).remove();
       }
-			},
+			}
 		});
 
 	});
@@ -86,7 +82,7 @@ var sizeCoificient = 0.0004;
     function getBoxSizes(){
       var SumFields = document.getElementsByClassName('draggable');
         [].slice.call( SumFields ).forEach(function ( div ) {
-            div.children[0].children[0].children[0].children[0].children[1].innerHTML = 
+            div.children[0].children[0].children[0].children[1].innerHTML = 
             ((div.clientHeight * div.clientWidth)* sizeCoificient).toFixed(2)+ " m<sup>2</sup>";;
         });
     }
