@@ -61,6 +61,7 @@
 
 
 	function CalculateSum(){
+    var SqSumma = 0.0;
       var SumFields = document.getElementsByClassName('SqMeter');
         [].slice.call( SumFields ).forEach(function ( div ) {
             SqSumma = SqSumma + parseFloat(div.innerHTML);
@@ -72,7 +73,7 @@
     function getBoxSizes(){
       var SumFields = document.getElementsByClassName('draggable');
         [].slice.call( SumFields ).forEach(function ( div ) {
-            div.children[0].children[1].innerHTML = 
+            div.children[0].children[0].children[0].children[1].innerHTML = 
             ((div.clientHeight * div.clientWidth)* 0.0001).toFixed(2)+ " m<sup>2</sup>";;
         });
     }
@@ -107,10 +108,14 @@
 				$(this).rotate(90 + $angle);
 			});
 		});
+
+    CalculateWholeSum();
+
 	}
 
 	function CalculateWholeSum()
     {
+
       getBoxSizes();
       CalculateSum();
     }
