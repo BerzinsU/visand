@@ -84,7 +84,16 @@
 	}
 		
 	function addRoom(name, id) {
-		var room = "<div id='"+ id +"' class='drag ui-widget-content draggable'> <div class='info'> <p>"+ name +"</p> <p class='SqMeter'>00</p> <div></div> </div> </div>";
+		var room = "<div id='"+ id +"' class='drag ui-widget-content draggable'> \
+		<div class='info'> \
+			<div class='table'> \
+				<div class='table-cell'>\
+					<p>"+ name +"</p> \
+					<p class='SqMeter'>00</p> \
+				</div> \
+				</div>\
+			</div>\
+		</div>";
 		
 		$("#sandbox").append(room);
 		
