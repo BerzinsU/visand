@@ -34,11 +34,7 @@ var sizeCoificient = 0.0004;
 		$(".add-bathroom").click(function() {
 			addRoom("Bathroom", "bathroom");			
 		});
-
-		$(".add-bedroom").click(function() {
-			addRoom("Bedroom", "bedroom");			
-		});
-
+		
 		
 		$( ".trash" ).droppable({
       hoverClass: "deleting",       
@@ -46,8 +42,12 @@ var sizeCoificient = 0.0004;
 			drop: function( event, ui ) {			
       if(ui.draggable[0].id != "viewPane")			
       {	
+<<<<<<< HEAD
+			hoverClass: "deleting",
+			drop: function( event, ui ) {							
+=======
+>>>>>>> 4ed62cad3134e7ff042c159b2056df4d5e5084dd
 				$(ui.draggable).remove();
-        CalculateWholeSum();
       }
 			}
 		});
@@ -94,7 +94,7 @@ var sizeCoificient = 0.0004;
 	
 	
 	function setDrag(d) {
-		d.draggable({ cursor: "move", snap: true, containment: "#sandbox", 
+		d.draggable({ cursor: "move", snap: true, containment: "parent", 
 			grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
 	}
 		
