@@ -20,6 +20,7 @@
             <!-- Menu -->
             <div class="Menu">
 
+<<<<<<< HEAD
                 <div class="inside">
 
                     <img id="logo" src="images/logo.png" />
@@ -45,8 +46,12 @@
                         </div>
                     </div>
 
+=======
+                <div id="controls">
+                    <div class="button add-kitchen">add kitchen</div>
+                    <div class="button add-livingroom">add living room</div>
+>>>>>>> 9ccac2bf0812cc12b0d191573d2965a882754454
                 </div>
-                    
 
                 <div class="summary">
                     <span class="SqSum" id="SqSum">00</span>
@@ -58,12 +63,30 @@
             <!-- Sandbox -->
             <div class="sandbox" id="sandbox">
 
-<!--                 <div id="kitchen" class="drag ui-widget-content draggable">
+<<<<<<< HEAD
+                <div id="kitchen" class="drag ui-widget-content draggable">
+=======
+                <div id="draggable" class="drag ui-widget-content draggable">
                     <div class="info">
                         <p>Kitchen</p>
                         <p class="SqMeter" id="Kitchen">00</p>
                     </div>
-                </div> -->
+                </div>
+
+                <div id="draggable2" class="drag ui-widget-content draggable">
+>>>>>>> 9ccac2bf0812cc12b0d191573d2965a882754454
+                    <div class="info">
+                        <p>Kitchen</p>
+                        <p class="SqMeter" id="Kitchen">00</p>
+                    </div>
+                </div>
+
+                <div id="draggable3" class="drag ui-widget-content draggable">
+                    <div class="info">
+                        <p>Kitchen</p>
+                        <p class="SqMeter" id="Kitchen">00</p>
+                    </div>
+                </div>
 				
 				<div class="trash ui-widget-content">
 					
