@@ -52,7 +52,7 @@
          var SqMeter =  master.getElementsByClassName('SqMeter');
 
         [].slice.call( SqMeter ).forEach(function ( div ) {
-            div.innerHTML = (sqPixels * 0.0001).toFixed(2) + " m<sup>2</sup>";
+            div.innerHTML = (sqPixels * 0.0004).toFixed(2) + " m<sup>2</sup>";
         });
 
         CalculateSum();
@@ -73,7 +73,7 @@
       var SumFields = document.getElementsByClassName('draggable');
         [].slice.call( SumFields ).forEach(function ( div ) {
             div.children[0].children[1].innerHTML = 
-            ((div.clientHeight * div.clientWidth)* 0.0001).toFixed(2)+ " m<sup>2</sup>";;
+            ((div.clientHeight * div.clientWidth)* 0.0004).toFixed(2)+ " m<sup>2</sup>";;
         });
     }
 	

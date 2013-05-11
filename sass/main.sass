@@ -12,9 +12,27 @@ body
 	letter-spacing: 0.1em
 
 #kitchen
-	width: 273px
-	height: 195px
+	width: 200px
+	height: 200px
 	background-image: url("../roomplans/dining.png")
+	background-repeat: no-repeat
+	background-size: 100%
+	background-position: 0px  0px
+	background-color: transparent
+
+#living-room
+	width: 300px
+	height: 200px
+	background-image: url("../roomplans/LIVINGROOM_FULL.png")
+	background-size: 100%
+	background-repeat: no-repeat
+	background-position: 0px  0px
+	background-color: transparent
+
+#bathroom
+	width: 125px
+	height: 125px
+	background-image: url("../roomplans/BATHROOM_2.png")
 	background-repeat: no-repeat
 	background-size: 100%
 	background-position: 0px  0px
@@ -50,6 +68,12 @@ body
 		.info 
 			text-align: center
 			height: 100%
+			@include opacity(0)
+			@include transition-property(opacity)
+			@include transition-duration(0.20s)
+			-webkit-backface-visibility: hidden
+			-moz-backface-visibility: hidden
+			-ms-backface-visibility: hidden
 
 			p
 				display: block
@@ -60,7 +84,8 @@ body
 					font-weight: bold
 		&:hover
 			.info 
-				display: block
+				@include opacity(1)
+				background-image: url("../images/trans.png")
 
 .Menu
 	width: 250px
