@@ -43,6 +43,7 @@ var sizeCoificient = 0.0004;
       if(ui.draggable[0].id != "viewPane")			
       {	
 				$(ui.draggable).remove();
+        CalculateWholeSum();
       }
 			}
 		});
