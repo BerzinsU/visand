@@ -1,6 +1,13 @@
  
 
  $(function() {     
+		$(".trash").droppable({
+			tolerance: "pointer", 
+			drop: function( event, ui ) {
+				alert(1);
+				$(ui.draggable).remove();
+			},
+		});
 
       var $droppable5 = $( "#droppable5" );
 
@@ -17,8 +24,8 @@
     
      
       $( "#draggable6" ).draggable({ cursor: "move", snap: true, containment: "parent", 
-        grid: [ 39,39 ] });;
-            
+        grid: [ 39,39 ] });
+		
 
     });
 
