@@ -1,7 +1,18 @@
 
 var sizeCoificient = 0.0004;
 
-	 $(function() {     
+	 $(function() { 
+
+		$("a.share").click(function(){
+			$("#send-project").fadeIn("fast");
+			// console.log("works");
+			return false;
+		});
+
+		$("#send-project").find(".close").click(function()
+		{
+			$("#send-project").fadeOut();
+		});
 
 		 var $sandbox = $( "#sandbox" );
 		   
@@ -40,8 +51,8 @@ var sizeCoificient = 0.0004;
 		});
 
 		
-		$( ".trash" ).droppable({
-      hoverClass: "deleting",       
+		$(".trash" ).droppable({
+      		hoverClass: "deleting",       
 			tolerance: "touch", 
 			drop: function( event, ui ) {			
       if(ui.draggable[0].id != "viewPane")			
@@ -80,7 +91,7 @@ var sizeCoificient = 0.0004;
             SqSumma = SqSumma + parseFloat(div.innerHTML);
         });
         document.getElementById('SqSum').innerHTML = "Total m<sup>2</sup>: " + SqSumma.toFixed(2);
-        document.getElementById('TotalPrice').innerHTML = "Total price:" + (SqSumma * 1000).toFixed(2) + "Eur";
+        document.getElementById('TotalPrice').innerHTML = "Total price: " + (SqSumma * 1000).toFixed(2) + " Eur";
     };
 
     function getBoxSizes(){
@@ -132,4 +143,3 @@ var sizeCoificient = 0.0004;
       getBoxSizes();
       CalculateSum();
     }
-	

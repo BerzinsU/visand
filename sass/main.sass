@@ -4,7 +4,6 @@
 html, body
 	width: 100%
 	height: 100%
-	background-image: url("../images/grid.png")
 
 body 
 	background-color: #f2f2f2
@@ -12,53 +11,50 @@ body
 	line-height: 1.4
 	letter-spacing: 0.1em
 
+h1, h2, h3, h4, p, span, a
+	-webkit-font-smoothing: 1px
+	-moz-transform:translate3d(0, 0, 0)
+
+@mixin room 
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	-webkit-backface-visibility: hidden
+	-moz-backface-visibility: hidden
+	-ms-backface-visibility: hidden
+	-moz-transform:translate3d(0, 0, 0)
+	background-repeat: no-repeat
+	background-position: center
+	background-color: transparent
+
 #kitchen
 	width: 200px
 	height: 200px
 	background-image: url("../roomplans/dining.png")
-	background-repeat: no-repeat
-	background-size: 100%
-	background-position: 0px  0px
-	background-color: transparent
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
+	background-size: 200px 200px
+	@include room
 
 #living-room
 	width: 300px
 	height: 200px
 	background-image: url("../roomplans/LIVINGROOM_FULL.png")
-	background-size: 100%
-	background-repeat: no-repeat
-	background-position: 0px  0px
-	background-color: transparent
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
+	background-size: 300px 200px
+	@include room
 
 #bathroom
 	width: 125px
 	height: 125px
 	background-image: url("../roomplans/BATHROOM_2.png")
-	background-repeat: no-repeat
-	background-size: 100%
-	background-position: 0px  0px
-	background-color: transparent
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
+	background-size: 125px 125px
+	@include room
+
 
 #bedroom
 	width: 250px
 	height: 175px
 	background-image: url("../roomplans/BEDROOM_FULL_2.png")
-	background-repeat: no-repeat
-	background-size: 100%
-	background-position: 0px  0px
-	background-color: transparent
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
+	background-size: 250px 175px
+	@include room
 
 .sandbox
 	width: auto
@@ -70,12 +66,13 @@ body
 	top: 0
 	bottom: 0
 	overflow: hidden
+	background-image: url("../images/grid.png")
 
 	.drag 
 		@include transition-property(left, top)
 		@include transition-duration(0.05s)
 		overflow: hidden
-		border: 1px solid #333333
+		border: 2px solid #333333
 
 
 		img 
@@ -93,9 +90,6 @@ body
 			@include opacity(0)
 			@include transition-property(opacity)
 			@include transition-duration(0.20s)
-			-webkit-backface-visibility: hidden
-			-moz-backface-visibility: hidden
-			-ms-backface-visibility: hidden
 
 			p
 				display: block
@@ -116,19 +110,12 @@ body
 	left: 20px
 	top: 20px
 	bottom: 15px
+	z-index: 1
 	@include border-radius(4px)
 	// overflow: auto
 
-	.inside
-		padding: 25px
-
-	h2 
-		color: white
-		font-weight: 400
-
 	#logo 
 		display: block
-		margin-bottom: 25px
 
 	.summary
 		overflow: hidden 
@@ -136,6 +123,12 @@ body
 		margin: 25px
 		padding-top: 25px
 		border-top: 1px solid #333333
+
+		h3
+			color: white
+			font-weight: 800
+			font-size: 14px
+			margin-bottom: 10px
 
 		span 
 			color: white
@@ -153,7 +146,7 @@ body
 			line-height: 50px
 			background-color: #2fa88e
 			@include border-radius(4px)
-			@include transition-property(bac)
+			@include transition-property(background-color)
 			@include transition-duration(0.20s)
 			width: auto
 			text-align: center
@@ -216,6 +209,11 @@ body
 	position: relative
 	height: 100%
 
+.inside
+	padding: 25px
+
+	&.big 
+		padding: 50px
 
 .table
 	display: table
@@ -252,4 +250,46 @@ body
 	height: 5000px
 	margin-left: -2500px
 	margin-top: -2500px
+
+#send-project
+	background-image: url("../images/trans-black.png")
+	position: absolute
+	top: 0px
+	left: 0px
+	right: 0px
+	bottom: 0px
+	z-index: 100
+	display: none
+
+	.window
+		width: 500px 
+		height: 400px
+		padding-top: 60px
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -250px
+		margin-top: -200px
+		background-color: white
+		@include border-radius(4px)
+
+		p 
+			font-size: 14px
+
+	.close
+		background-image: url("../images/sprites.png")
+		background-repeat: no-repeat
+		background-position: -40px -80px
+		background-color: transparent
+		width: 40px
+		height: 40px
+		position: absolute
+		top: 25px
+		right: 25px
+		cursor: pointer
+		@include transition-property(opacity)
+		@include transition-duration(0.20s)
+
+		&:hover 
+			@include opacity(0.7)
 
