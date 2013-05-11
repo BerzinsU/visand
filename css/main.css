@@ -66,7 +66,7 @@ body {
 #draggable {
   width: 273px;
   height: 195px;
-  background-image: url("../roomplans/kitchen.png");
+  background-image: url("../roomplans/dining.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 0px 0px;
@@ -119,10 +119,10 @@ body {
   -moz-transition-property: left, top;
   -o-transition-property: left, top;
   transition-property: left, top;
-  -webkit-transition-duration: 0.1s;
-  -moz-transition-duration: 0.1s;
-  -o-transition-duration: 0.1s;
-  transition-duration: 0.1s;
+  -webkit-transition-duration: 0.05s;
+  -moz-transition-duration: 0.05s;
+  -o-transition-duration: 0.05s;
+  transition-duration: 0.05s;
   overflow: hidden;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -132,8 +132,18 @@ body {
 .sandbox div img {
   display: block;
 }
-.sandbox div .ui-resizable, .sandbox div .ui-icon-gripsmall-diagonal-se, .sandbox div .ui-resizable-e, .sandbox div .ui-resizable-s {
+.sandbox div .ui-resizable, .sandbox div .ui-icon-gripsmall-diagonal-se, .sandbox div .ui-resizable-e, .sandbox div .ui-resizable-s, .sandbox div .SqMeter {
   border: 0;
+}
+.sandbox div.ui-draggable-dragging {
+  border: 1px solid red !important;
+}
+.sandbox div .info {
+  text-align: center;
+  display: none;
+}
+.sandbox div:hover .info {
+  display: block;
 }
 
 .Menu {
@@ -158,13 +168,10 @@ body {
   height: 100%;
 }
 
-	  
-	  .trash {
-        width: 100px; 
-        height: 100px; 
-		
-		position: absolute;
-        bottom: 0px;
-		right: 0px;
-		background-color: blue;
-	  }
+.trash {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+}

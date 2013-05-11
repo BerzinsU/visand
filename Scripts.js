@@ -1,6 +1,6 @@
  $(function() {     
 		$(".trash").droppable({
-			tolerance: "pointer", 
+			tolerance: "touch", 
 			drop: function( event, ui ) {
 				alert(1);
 				$(ui.draggable).remove();
@@ -22,8 +22,7 @@
     
      
       $( "#draggable6" ).draggable({ cursor: "move", snap: true, containment: "parent", 
-        grid: [ 39,39 ] });
-        grid: [ 20,20 ] });;
+        grid: [ 20,20 ] });
 		
 
     });
