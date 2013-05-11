@@ -60,7 +60,9 @@ html, body {
 }
 
 body {
-  background-color: white;
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
 }
 
 #draggable {
@@ -142,6 +144,9 @@ body {
   text-align: center;
   display: none;
 }
+.sandbox div .info span {
+  display: inline-block;
+}
 .sandbox div:hover .info {
   display: block;
 }
@@ -156,7 +161,12 @@ body {
   bottom: 0;
 }
 .Menu .summary {
-  padding: 15px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.Menu .summary span {
+  color: white;
 }
 
 .SqMeter {

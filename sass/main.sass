@@ -6,7 +6,9 @@ html, body
 	height: 100%
 
 body 
-	background-color: white
+	background-color: #f2f2f2
+	font-family: 'Roboto', sans-serif
+	line-height: 1.4
 
 #draggable
 	width: 273px
@@ -76,6 +78,9 @@ body
 			text-align: center
 			display: none
 
+			span 
+				display: inline-block
+
 		&:hover
 			.info 
 				display: block
@@ -90,7 +95,13 @@ body
 	bottom: 0
 
 	.summary
-		padding: 15px
+		position: absolute
+		bottom: 15px
+		left: 15px
+
+
+		span 
+			color: white
 
 .SqMeter
 	float: left
