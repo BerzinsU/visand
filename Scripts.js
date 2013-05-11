@@ -152,16 +152,16 @@ roomPricesCalculated[3] = 0.0 ;
 
   function getpriceForRoom(div){
     if(div.parentElement.parentElement.parentElement.parentElement.id == "bathroom"){
-      roomPricesCalculated[0]= roomPrices[0]*parseFloat(div.innerHTML);
+      roomPricesCalculated[0]= roomPricesCalculated[0]+ (roomPrices[0]*parseFloat(div.innerHTML));
     }
     if(div.parentElement.parentElement.parentElement.parentElement.id == "kitchen"){
-      roomPricesCalculated[1]= roomPrices[1]*parseFloat(div.innerHTML);
+      roomPricesCalculated[1]= roomPricesCalculated[1]+ (roomPrices[1]*parseFloat(div.innerHTML));
     }
     if(div.parentElement.parentElement.parentElement.parentElement.id == "living-room"){
-      roomPricesCalculated[2]= roomPrices[2]*parseFloat(div.innerHTML);
+      roomPricesCalculated[2]= roomPricesCalculated[2]+ (roomPrices[2]*parseFloat(div.innerHTML));
     }
     if(div.parentElement.parentElement.parentElement.parentElement.id == "bedroom"){
-      roomPricesCalculated[3]= roomPrices[3]*parseFloat(div.innerHTML);
+      roomPricesCalculated[3]= roomPricesCalculated[3]+ (roomPrices[3]*parseFloat(div.innerHTML));
     }
 
   }
