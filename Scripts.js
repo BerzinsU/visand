@@ -140,7 +140,11 @@ var sizeCoificient = 0.0004;
 
 	function CalculateWholeSum()
     {
-
       getBoxSizes();
       CalculateSum();
     }
+
+    var element = document.getElementById('send-project');
+    var hammertime = Hammer(element).on("tap", function(event) {
+        alert('hello!');
+    });
