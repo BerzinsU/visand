@@ -13,32 +13,16 @@
 
     </head>
 
-    <body>
+    <body onload="CalculateWholeSum()">
 
         <div id="wrapper">
 
             <!-- Menu -->
             <div class="Menu">
 
-                <h2>My dream house project</h2>
-
                 <div id="controls">
-                    <div class="button add-kitchen">
-                        <span></span>
-                        <p>Kitchen</p>
-                    </div>
-                    <div class="button add-livingroom">
-                        <span></span>
-                        <p>Living room</p>
-                    </div>
-                    <div class="button add-bathroom">
-                        <span></span>
-                        <p>Bathroom</p>
-                    </div>
-                    <div class="button add-custom">
-                        <span></span>
-                        <p>Custom</p>
-                    </div>
+                    <div class="button add-kitchen">add kitchen</div>
+                    <div class="button add-livingroom">add living room</div>
                 </div>
 
                 <div class="summary">
@@ -51,18 +35,27 @@
             <!-- Sandbox -->
             <div class="sandbox" id="sandbox">
 
-                <div id="kitchen" class="drag ui-widget-content">
-
+                <div id="draggable" class="drag ui-widget-content draggable">
                     <div class="info">
-                        <div class="table">
-                            <div class="table-cell">
-                                <span>Kitchen</span>
-                                <span class="TotalPrice" id="TotalPrice">00</span>
-                            </div>
-                        </div>
+                        <p>Kitchen</p>
+                        <p class="SqMeter" id="Kitchen">00</p>
                     </div>
                 </div>
 
+                <div id="draggable2" class="drag ui-widget-content draggable">
+                    <div class="info">
+                        <p>Kitchen</p>
+                        <p class="SqMeter" id="Kitchen">00</p>
+                    </div>
+                </div>
+
+                <div id="draggable3" class="drag ui-widget-content draggable">
+                    <div class="info">
+                        <p>Kitchen</p>
+                        <p class="SqMeter" id="Kitchen">00</p>
+                    </div>
+                </div>
+				
 				<div class="trash ui-widget-content">
 					trash
 				</div>
