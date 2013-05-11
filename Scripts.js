@@ -1,53 +1,50 @@
 
 
- $(function() {     
+	 $(function() {     
 
-      var $droppable5 = $( "#droppable5" );
+		 var $sandbox = $( "#sandbox" );
+		   
+		$( ".draggable").each(function() {
+			setDrag($(this));
+		});
+				
+		$("#kitchen").click(function(e) {
+			alert(1);
+			$angle = 0;
+			if($(this).getRotateAngle() != 0) {
+				$angle = $(this).getRotateAngle()[0];
+			}
+			$(this).rotate(90 + $angle);
+		});
+				
+		var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
 
 
-            
-      var $sandbox = $( "#sandbox" );
-       
-          // let the gallery items be draggable
-          $( ".draggable").draggable({ cursor: "move", snap: true, containment: "parent", 
-        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
-			
-			$("#kitchen").click(function(e) {
-				alert(1);
-				$angle = 0;
-				if($(this).getRotateAngle() != 0) {
-					$angle = $(this).getRotateAngle()[0];
-				}
-				$(this).rotate(90 + $angle);
-			});
-
-        $( "#draggable4" ).draggable({cursor: "move"});
-        var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
-    
-     
-      $( "#draggable6" ).draggable({ cursor: "move", snap: true, containment: "parent", 
-        grid: [ 20,20 ] });
-
-		 $( ".infiniteSandbox").draggable({cursor: "move"});
+		$( ".infiniteSandbox").draggable({cursor: "move"});
 				
 		$(".add-kitchen").click(function() {
-			addRoom("draggable", "Kitchen", "kitchen");			
+			addRoom("Kitchen", "kitchen");			
 		});
 		
 		$(".add-livingroom").click(function() {
-			addRoom("draggable2", "Living room", "living-room");			
+			addRoom("Living room", "living-room");			
 		});
 		
 		
-		
+		$( ".trash" ).droppable({
+			tolerance: "touch", 
+			drop: function( event, ui ) {							
+				$(ui.draggable).remove();
+			},
+		});
 
-    });
+	});
 
-var SqSumma = 0.0;
+	var SqSumma = 0.0;
 
     function resizedBlock(s, e)
     {
-      
+      SqSumma = 0.0;
       s.value;
       var sqPixels = e.size.height * e.size.width;
       var master = document.getElementById(e.element[0].id);
@@ -63,7 +60,7 @@ var SqSumma = 0.0;
 
 
 
-  function CalculateSum(){
+	function CalculateSum(){
       var SumFields = document.getElementsByClassName('SqMeter');
         [].slice.call( SumFields ).forEach(function ( div ) {
             SqSumma = SqSumma + parseFloat(div.innerHTML);
@@ -82,18 +79,27 @@ var SqSumma = 0.0;
 	
 	
 	function setDrag(d) {
-			d.draggable({ 
-				cursor: "move", snap: true, containment: "parent", 
-				grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
-		}
+		d.draggable({ cursor: "move", snap: true, containment: "parent", 
+			grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
+	}
 		
-	function addRoom(dragable, name, id) {
-		var room = "<div id='"+ dragable +"' class='drag ui-widget-content'> <div class='info'> <p>"+ name +"</p> <p class='SqMeter' id='"+ id +"'>00</p> <div></div> </div> </div>";
-				
-		$("#sandbox").append(room);				
-		$( ".drag", $( "#sandbox" ) ).draggable({ cursor: "move", snap: true, containment: "parent", 
-        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });		
+	function addRoom(name, id) {
+		var room = "<div id='"+ id +"' class='drag ui-widget-content draggable'> \
+		<div class='info'> \
+			<div class='table'> \
+				<div class='table-cell'>\
+					<p>"+ name +"</p> \
+					<p class='SqMeter'>00</p> \
+				</div> \
+				</div>\
+			</div>\
+		</div>";
 		
+		$("#sandbox").append(room);
+		
+		$( ".draggable").each(function() {
+			setDrag($(this));
+		});
 	}
 
 	function CalculateWholeSum()
@@ -101,3 +107,4 @@ var SqSumma = 0.0;
       getBoxSizes();
       CalculateSum();
     }
+	
