@@ -142,6 +142,10 @@ body {
 }
 .sandbox .drag .info {
   text-align: center;
+  height: 100%;
+}
+.sandbox .drag .info span {
+  display: block;
 }
 .sandbox .drag:hover .info {
   display: block;
@@ -156,9 +160,16 @@ body {
   top: 0;
   bottom: 0;
 }
+.Menu .inside {
+  padding: 25px;
+}
 .Menu h2 {
   color: white;
-  margin: 15px;
+  font-weight: 400;
+}
+.Menu #logo {
+  display: block;
+  margin-bottom: 20px;
 }
 .Menu .summary {
   position: absolute;
@@ -169,20 +180,21 @@ body {
   color: white;
 }
 .Menu #controls {
-  margin-top: -20px;
+  margin-top: 20px;
+  margin-left: -40px;
 }
 .Menu .button {
   color: white;
   cursor: pointer;
-  width: 100px;
   text-align: center;
   float: left;
+  margin-left: 40px;
   margin-top: 20px;
 }
 .Menu .button span {
   background-image: url("../images/sprites.png");
   width: 40px;
-  height: 40px;
+  height: 35px;
   overflow: hidden;
   background-repeat: no-repeat;
   display: inline-block;
@@ -203,7 +215,7 @@ body {
   background-position: -40px -40px;
 }
 .Menu .button:active {
-  background-color: red;
+  opacity: 0.7;
 }
 
 .SqMeter {
@@ -213,14 +225,6 @@ body {
 #wrapper {
   position: relative;
   height: 100%;
-}
-
-.trash {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 60px;
-  height: 60px;
 }
 
 .table {
@@ -234,4 +238,16 @@ body {
   width: 100%;
   height: 100%;
   vertical-align: middle;
+}
+
+.trash {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  background-image: url("../images/sprites.png");
+  background-repeat: no-repeat;
+  background-position: 0px -80px;
+  border: 0px;
 }
