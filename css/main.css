@@ -65,26 +65,26 @@ body {
 
 #draggable {
   width: 273px;
-  height: 273px;
+  height: 195px;
   background-image: url("../roomplans/kitchen.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 #draggable2 {
-  width: 240px;
-  height: 160px;
+  width: 273px;
+  height: 195px;
   background-image: url("../roomplans/LIVINGROOM_FULL.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 #draggable3 {
-  width: 228px;
-  height: 160px;
+  width: 273px;
+  height: 195px;
   background-image: url("../roomplans/BEDROOM_FULL_2.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 #draggable4 {
@@ -106,15 +106,34 @@ body {
   background-color: #fefefe;
   width: auto;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   position: absolute;
   left: 250px;
   right: 0;
   top: 0;
   bottom: 0;
+  background-image: url("../roomplans/grid.png");
+}
+.sandbox div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-property: left, top;
+  -moz-transition-property: left, top;
+  -o-transition-property: left, top;
+  transition-property: left, top;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  border: 1px solid black;
+  overflow: hidden;
 }
 .sandbox div img {
   display: block;
+}
+.sandbox div .ui-icon-gripsmall-diagonal-se {
+  border: 0;
 }
 
 .Menu {
@@ -125,6 +144,8 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
+}
+.Menu .summary {
   padding: 15px;
 }
 

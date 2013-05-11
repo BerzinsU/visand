@@ -1,4 +1,5 @@
 @import "compass/reset"
+@import "compass/css3"
 
 html, body
 	width: 100%
@@ -9,24 +10,24 @@ body
 
 #draggable
 	width: 273px
-	height: 273px
+	height: 195px
 	background-image: url("../roomplans/kitchen.png")
 	background-repeat: no-repeat
-	background-size: 100%
+	background-size: cover
 
 #draggable2
-	width: 240px
-	height: 160px
+	width: 273px
+	height: 195px
 	background-image: url("../roomplans/LIVINGROOM_FULL.png")
 	background-repeat: no-repeat
-	background-size: 100%
+	background-size: cover
 
 #draggable3
-	width: 228px
-	height: 160px
+	width: 273px
+	height: 195px
 	background-image: url("../roomplans/BEDROOM_FULL_2.png")
 	background-repeat: no-repeat
-	background-size: 100%
+	background-size: cover
 
 #draggable4
 	width: 100px
@@ -44,17 +45,29 @@ body
 	background-color: #fefefe
 	width: auto
 	height: 100%
-	overflow: hidden
+	overflow: auto
 	position: absolute
 	left: 250px
 	right: 0
 	top: 0
 	bottom: 0
+	background-image: url("../roomplans/grid.png")
 
 	div 
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		@include transition-property(left, top)
+		@include transition-duration(0.10s)
+		border: 1px solid black
+		overflow: hidden
+
 
 		img 
 			display: block
+
+		.ui-icon-gripsmall-diagonal-se
+			border: 0
 
 
 .Menu
@@ -65,7 +78,9 @@ body
 	left: 0
 	top: 0
 	bottom: 0
-	padding: 15px
+
+	.summary
+		padding: 15px
 
 .SqMeter
 	float: left
