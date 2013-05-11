@@ -13,7 +13,8 @@ body
 	height: 195px
 	background-image: url("../roomplans/kitchen.png")
 	background-repeat: no-repeat
-	background-size: cover
+	background-size: 100%
+	background-position: 0px  0px
 
 #draggable2
 	width: 273px
@@ -51,22 +52,21 @@ body
 	right: 0
 	top: 0
 	bottom: 0
-	background-image: url("../roomplans/grid.png")
 
 	div 
+		@include transition-property(left, top)
+		@include transition-duration(0.10s)
+		overflow: hidden
 		-webkit-box-sizing: border-box
 		-moz-box-sizing: border-box
 		box-sizing: border-box
-		@include transition-property(left, top)
-		@include transition-duration(0.10s)
-		border: 1px solid black
-		overflow: hidden
+		border: 1px solid gray
 
 
 		img 
 			display: block
 
-		.ui-icon-gripsmall-diagonal-se
+		.ui-resizable, .ui-icon-gripsmall-diagonal-se, .ui-resizable-e, .ui-resizable-s
 			border: 0
 
 
