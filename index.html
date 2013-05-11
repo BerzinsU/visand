@@ -8,10 +8,10 @@
 
   <style>
       #draggable { 
-        width: 160px; 
-        height: 160px; 
+        width: 473px; 
+        height: 473px; 
         padding: 0.5em; 
-        background-image: url('');
+        background-image: url('roomplans/kitchen.png');
         background-repeat:no-repeat;
         background-size: 100%;
       }
@@ -22,7 +22,7 @@
     
       #draggable4 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
       #droppable5 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
-    
+      #draggable6 { width: 60px; height: 20px; padding: 0.5em; }
 
 
       .sandbox {
@@ -32,21 +32,25 @@
         height: 800px;
       }
 
+      .SqMeter {
+
+        float: left;
+      }
 
     </style>
 
 
     <script>
     $(function() {      
-      $( "#draggable" ).draggable({ snap: true, containment: "parent", 
-        grid: [ 20,20 ] }).resizable({ aspectRatio: true, grid: 20});;;
-      $( "#draggable2" ).draggable({ snap: true, containment: "parent", 
-        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20 });;
-      $( "#draggable3" ).draggable({ snap: true, containment: "parent", 
-        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20 });;
+      $( "#draggable" ).draggable({ cursor: "move", snap: true, containment: "parent", 
+        grid: [ 20,20 ] }).resizable({ aspectRatio: true, grid: 20, resize: function( event, ui ){resizedBlock(event, ui)}});;;
+      $( "#draggable2" ).draggable({ cursor: "move", snap: true, containment: "parent", 
+        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });;
+      $( "#draggable3" ).draggable({ cursor: "move", snap: true, containment: "parent", 
+        grid: [ 20,20 ] }).resizable({ aspectRatio: true,  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });;
             
        $(function() {
-        $( "#draggable4" ).draggable();
+        $( "#draggable4" ).draggable({cursor: "move"});
         $( "#droppable5" ).droppable({
           drop: function( event, ui ) {
             $(this)
@@ -57,8 +61,34 @@
           }
         });
       });
+      $( "#draggable6" ).draggable({ cursor: "move", snap: true, containment: "parent", 
+        grid: [ 20,20 ] });;
+            
+
     });
 
+
+    function resizedBlock(s, e)
+    {
+      var SqSumma = 0.0;
+      s.value;
+      var sqPixels = e.size.height * e.size.width;
+      var master = document.getElementById(e.element[0].id);
+
+         var SqMeter =  master.getElementsByClassName('SqMeter');
+
+        [].slice.call( SqMeter ).forEach(function ( div ) {
+            div.innerHTML = (sqPixels * 0.0001).toFixed(2) + " m<sup>2</sup>";
+        });
+
+        var SumFields = document.getElementsByClassName('SqMeter');
+        [].slice.call( SumFields ).forEach(function ( div ) {
+            SqSumma = SqSumma + parseFloat(div.innerHTML);
+        });
+        document.getElementById('SqSum').innerHTML = "Total m<sup>2</sup>: " + SqSumma.toFixed(2);
+        document.getElementById('TotalPrice').innerHTML = "Total price:" + (SqSumma * 1000).toFixed(2) + "Eur";
+      //master.getElementsByClassName('SqMeter').innerHTML = (sqPixels * 0.0001).toFixed(2) + " m<sup>2</sup>";
+    }
     </script>
 </head>
 
@@ -72,16 +102,22 @@
   <div class="sandbox" id="containment-wrapper">
     <div id="draggable" class="ui-widget-content">
       <p>Kitchen</p>
+      <div class="SqMeter" id="Kitchen">00</div>
     </div>
 
     <div id="draggable2" class="ui-widget-content" class="DragableClass">
       <p>Living room</p>
+      <div class="SqMeter" id="Kitchen">00</div>
     </div>
 
     <div id="draggable3" class="ui-widget-content">
       <p>Bedroom</p>
+      <div class="SqMeter" id="Kitchen">00</div>
     </div>
   </div>
+
+  <div class="SqSum" id="SqSum">00</div>
+  <div class="TotalPrice" id="TotalPrice">00</div>
 
   <div id="draggable4" class="ui-widget-content">
     <p>Drag me to my target</p>
