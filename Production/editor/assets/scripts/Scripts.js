@@ -209,8 +209,12 @@ roomPricesCalculated[5] = 0.0 ;
   }
 	
 	function setDrag(d) {
-		d.draggable({ cursor: "move", snap: true, containment: "#sandbox", 
-			}).resizable({  resize: function( event, ui ){resizedBlock(event, ui)} });
+		d.draggable({ cursor: "move", snap: true, containment: "#sandbox" 
+			}).resizable({  
+				resize: function( event, ui ){resizedBlock(event, ui)},
+			 	start: function( event, ui ){addhover(ui)},
+				end: function( event, ui ){removeClass(ui)}
+		});
 	}
 		
 	function addRoom(name, id) {
@@ -258,3 +262,11 @@ roomPricesCalculated[5] = 0.0 ;
 	    roomPricesCalculated[5] = 0.0 ;
     }
 
+function addhover(obj) {
+	//document.getElementById(obj.element[0].id).addClass("touchHover");
+	$(obj.element[0].id).addClass("touchhover");
+}
+
+function removehover(obj) {
+	$(obj.element[0].id).removeClass("touchhover");
+}
