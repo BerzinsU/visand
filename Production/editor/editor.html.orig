@@ -7,25 +7,26 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="assets/css/main.css" />
 
+<<<<<<< HEAD
         <script src="assets/scripts/jquery-1.9.1.min.js"></script>
         <script src="assets/scripts/jquery-ui.js"></script>
 		<script src="http://jqueryrotate.googlecode.com/files/jQueryRotate.2.2.js" type="text/javascript"></script>
-<<<<<<< HEAD
         <script src="assets/scripts/Scripts.js"></script>
         <script src="assets/scripts/hammer.js"></script>
         <script src="assets/scripts/jquery.hammer.js"></script>
         <script src="assets/scripts/modernizr.js"></script>
-=======
-        <script src="./Scripts.js"></script>
-        <script src="./hammer.js"></script>
-        <script src="jquery.hammer.js"></script>
-        <script src="modernizr.js"></script>
         <script src="jquery.finger.js"></script>
-<<<<<<< HEAD:Production/editor/editor.html.orig
->>>>>>> 66dbbede90e7c8f278cf417d33ef6444f8e40b41
-=======
         <script src="jquery.ui.touch-punch>"></script>
->>>>>>> f19898b508404100875162efe6b0d5d5e8018b9b:editor/editor.html
+=======
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+<script src="https://raw.github.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
+
+		<script src="http://jqueryrotate.googlecode.com/files/jQueryRotate.2.2.js" type="text/javascript"></script>
+        <script src="./Scripts.js"></script>
+
+        
+>>>>>>> b9b224413663275b2d12b1ae8075a9a1a011fa94
 
     </head>
 
@@ -50,6 +51,7 @@
                             <p>Living room</p>
 
                             <ul class="sub-rooms" id="livingroom">
+                                <li></li>
                                 <li class="add-livingroom-solo">Solo</li>
                                 <li class="add-livingroom-kitchen">With kitchen</li>
                             </ul>
@@ -61,6 +63,7 @@
                             <p>Bathroom</p>
 
                             <ul class="sub-rooms" id="bathroom">
+                                <li></li>
                                 <li class="add-bathroom-shower">Shower</li>
                                 <li class="add-bathroom-bath">Bath</li>
                             </ul>
@@ -72,6 +75,7 @@
                             <p>Bedroom</p>
 
                             <ul class="sub-rooms" id="bedroom">
+                                <li></li>
                                 <li class="add-bedroom-master">Master</li>
                                 <li class="add-bedroom-small">Small</li>
                             </ul>
