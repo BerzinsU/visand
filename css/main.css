@@ -64,6 +64,7 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.4;
   letter-spacing: 0.1em;
+  background-image: url("../images/body-bg.png");
 }
 
 h1, h2, h3, h4, p, span, a {
@@ -71,8 +72,8 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #kitchen {
-  width: 200px;
-  height: 200px;
+  min-width: 200px;
+  min-height: 200px;
   background-image: url("../roomplans/dining.png");
   background-size: 200px 200px;
   -webkit-box-sizing: border-box;
@@ -144,7 +145,6 @@ h1, h2, h3, h4, p, span, a {
   top: 0;
   bottom: 0;
   overflow: hidden;
-  background-image: url("../images/grid.png");
 }
 .sandbox .drag {
   -webkit-transition-property: left, top;
@@ -169,7 +169,11 @@ h1, h2, h3, h4, p, span, a {
 }
 .sandbox .drag .info {
   text-align: center;
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition-property: opacity;
@@ -402,7 +406,9 @@ h1, h2, h3, h4, p, span, a {
   border-radius: 4px;
 }
 #send-project .window p {
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2fa88e;
 }
 #send-project .close {
   background-image: url("../images/sprites.png");
@@ -427,4 +433,58 @@ h1, h2, h3, h4, p, span, a {
 #send-project .close:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
+}
+
+#email {
+  margin-top: 50px;
+}
+#email input {
+  -webkit-appearance: none;
+  border: 0px;
+  background: none;
+  outline: none;
+  font-size: 18px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 100%;
+}
+#email .input {
+  position: relative;
+  height: 50px;
+  width: 80%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #2fa88e;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+#email .input input {
+  left: 10px;
+}
+#email .submit {
+  position: relative;
+  height: 50px;
+  width: 20%;
+  float: left;
+  background-color: #2fa88e;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#email .submit input {
+  color: white;
+  cursor: pointer;
 }
