@@ -53,20 +53,48 @@ roomPricesCalculated[5] = 0.0 ;
 		$(".add-kitchen").click(function() {
 			addRoom("Kitchen", "kitchen");			
 		});
-		
-		$(".add-livingroom").click(function() {
-			addRoom("Living room", "living-room");			
+
+		$(".add-garage").click(function() {
+			addRoom("Garage", "garage");			
 		});
 
-		$(".add-bathroom").click(function() {
-			addRoom("Bathroom", "bathroom");			
+		$(".add-sauna").click(function() {
+			addRoom("Sauna", "sauna");			
 		});
 
-		$(".add-bedroom").click(function() {
-			addRoom("Bedroom", "bedroom");			
+		$(".add-bedroom-master").click(function() {
+			addRoom("Master bedroom", "bedroom-master");			
 		});
 
-		
+		$(".add-bedroom-small").click(function() {
+			addRoom("Small bedroom", "bedroom-small");			
+		});
+
+		$(".add-bathroom-shower").click(function() {
+			addRoom("Shower", "shower");			
+		});
+
+		$(".add-bathroom-bath").click(function() {
+			addRoom("Bath", "bath");			
+		});
+
+		$(".add-livingroom-solo").click(function() {
+			addRoom("Living room - solo", "livingroom-solo");			
+		});
+
+		$(".add-livingroom-kitchen").click(function() {
+			addRoom("Living room - kitchen", "livingroom-kitchen");			
+		});
+
+		$(".has-sub").click(function()
+		{
+			$(this).toggleClass("active");
+			$(this).find(".sub-rooms").fadeToggle("fast");
+			$(this).siblings().removeClass("active");
+			$(this).siblings().find(".sub-rooms").hide();
+		});
+
+
 		$(".trash" ).droppable({
       		hoverClass: "deleting",       
 			tolerance: "touch", 

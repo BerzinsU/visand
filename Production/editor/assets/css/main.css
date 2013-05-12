@@ -69,12 +69,13 @@ body {
 
 h1, h2, h3, h4, p, span, a {
   -webkit-font-smoothing: 1px;
+  -moz-transform: translate3d(0, 0, 0);
 }
 
 #kitchen {
   min-width: 200px;
   min-height: 200px;
-  background-image: url("../roomplans/dining.png");
+  background-image: url("../roomplans/other/dining.png");
   background-size: 200px 200px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -82,15 +83,50 @@ h1, h2, h3, h4, p, span, a {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
 }
 
-#living-room {
-  width: 300px;
-  height: 200px;
-  background-image: url("../roomplans/LIVINGROOM_FULL.png");
+#sauna {
+  min-width: 200px;
+  min-height: 100px;
+  background-image: url("../roomplans/other/sauna.png");
+  background-size: 200px 100px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+#garage {
+  min-width: 325px;
+  min-height: 175px;
+  background-image: url("../roomplans/other/garage.png");
+  background-size: 220px 90px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+#livingroom-solo {
+  min-width: 300px;
+  min-height: 200px;
+  background-image: url("../roomplans/livingroom/solo.png");
   background-size: 300px 200px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -98,31 +134,33 @@ h1, h2, h3, h4, p, span, a {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
 }
 
-#bathroom {
-  width: 125px;
-  height: 125px;
-  background-image: url("../roomplans/BATHROOM_2.png");
-  background-size: 125px 125px;
+#livingroom-kitchen {
+  min-width: 400px;
+  min-height: 225px;
+  background-image: url("../roomplans/livingroom/kitchen.png");
+  background-size: 400px 225px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
 }
 
-#bedroom {
+#bedroom-master {
   width: 250px;
   height: 175px;
-  background-image: url("../roomplans/BEDROOM_FULL_2.png");
+  background-image: url("../roomplans/bedroom/master.png");
   background-size: 250px 175px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -130,6 +168,58 @@ h1, h2, h3, h4, p, span, a {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+#bedroom-small {
+  width: 150px;
+  height: 175px;
+  background-image: url("../roomplans/bedroom/small.png");
+  background-size: 150px 175px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+#shower {
+  width: 175px;
+  height: 75px;
+  background-image: url("../roomplans/bathroom/shower.png");
+  background-size: 175px 75px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+#bath {
+  width: 125px;
+  height: 125px;
+  background-image: url("../roomplans/bathroom/bath.png");
+  background-size: 125px 125px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -204,8 +294,8 @@ h1, h2, h3, h4, p, span, a {
   background-image: url("../images/menu-bg.png");
   position: absolute;
   left: 20px;
-  top: 20px;
-  bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   z-index: 1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -263,15 +353,36 @@ h1, h2, h3, h4, p, span, a {
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .Menu .summary a.share:hover {
   background-color: #36c3a4;
 }
 .Menu #controls {
-  margin-top: 20px;
   overflow: hidden;
   text-align: center;
+}
+.Menu ul.sub-rooms {
+  display: none;
+  position: absolute;
+  top: 66px;
+  width: 100%;
+  background-color: #333333;
+  z-index: 1;
+}
+.Menu ul.sub-rooms.active {
+  display: block;
+}
+.Menu ul.sub-rooms li {
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  display: block;
+  cursor: pointer;
+}
+.Menu ul.sub-rooms li:hover {
+  background-color: #2fa88e;
 }
 .Menu .button {
   color: white;
@@ -289,6 +400,7 @@ h1, h2, h3, h4, p, span, a {
   transition-duration: 0.2s;
   width: 100px;
   display: inline-block;
+  position: relative;
 }
 .Menu .button span {
   background-image: url("../images/sprites.png");
@@ -313,8 +425,11 @@ h1, h2, h3, h4, p, span, a {
 .Menu .button.add-bedroom span {
   background-position: -40px -40px;
 }
-.Menu .button:hover {
-  opacity: 0.7;
+.Menu .button.add-garage span {
+  background-position: 0px -120px;
+}
+.Menu .button.add-sauna span {
+  background-position: -40px -120px;
 }
 
 #wrapper {

@@ -14,7 +14,7 @@ body
 
 h1, h2, h3, h4, p, span, a
 	-webkit-font-smoothing: 1px
-	-moz-transform:translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
 
 @mixin room 
 	-webkit-box-sizing: border-box
@@ -23,51 +23,77 @@ h1, h2, h3, h4, p, span, a
 	-webkit-backface-visibility: hidden
 	-moz-backface-visibility: hidden
 	-ms-backface-visibility: hidden
-	-moz-transform:translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
 	background-repeat: no-repeat
 	background-position: center
 	background-color: transparent
 
+// Other
 #kitchen
 	min-width: 200px
 	min-height: 200px
-	background-image: url("../roomplans/dining.png")
+	background-image: url("../roomplans/other/dining.png")
 	background-size: 200px 200px
 	@include room
 
-#living-room
-	width: 300px
-	height: 200px
-	background-image: url("../roomplans/LIVINGROOM_FULL.png")
-	background-size: 300px 200px
-	@include room
-
-#bathroom
-	width: 125px
-	height: 125px
-	background-image: url("../roomplans/BATHROOM_2.png")
-	background-size: 125px 125px
-	@include room
-
-#bedroom
-	width: 250px
-	height: 175px
-	background-image: url("../roomplans/BEDROOM_FULL_2.png")
-	background-size: 250px 175px
+#sauna
+	min-width: 200px
+	min-height: 100px
+	background-image: url("../roomplans/other/sauna.png")
+	background-size: 200px 100px
 	@include room
 
 #garage
-	width: 325px
-	height: 175px
-	background-image: url("../roomplans/garage.png")
-	background-size: 240px 80px
+	min-width: 325px
+	min-height: 175px
+	background-image: url("../roomplans/other/garage.png")
+	background-size: 220px 90px
 	@include room
 
-#sauna
-	width: 100px
-	height: 200px
-	background-image: url("../roomplans/sauna.png")
-	background-size: 100px 200px
+// Living room
+#livingroom-solo
+	min-width: 300px
+	min-height: 200px
+	background-image: url("../roomplans/livingroom/solo.png")
+	background-size: 300px 200px
+	@include room
+
+#livingroom-kitchen
+	min-width: 400px
+	min-height: 225px
+	background-image: url("../roomplans/livingroom/kitchen.png")
+	background-size: 400px 225px
+	@include room
+
+
+// Bedroom
+#bedroom-master
+	width: 250px
+	height: 175px
+	background-image: url("../roomplans/bedroom/master.png")
+	background-size: 250px 175px
+	@include room
+
+#bedroom-small
+	width: 150px
+	height: 175px
+	background-image: url("../roomplans/bedroom/small.png")
+	background-size: 150px 175px
+	@include room
+
+// Bath
+#shower
+	width: 175px
+	height: 75px
+	background-image: url("../roomplans/bathroom/shower.png")
+	background-size: 175px 75px
+	@include room
+
+#bath
+	width: 125px
+	height: 125px
+	background-image: url("../roomplans/bathroom/bath.png")
+	background-size: 125px 125px
 	@include room
 
 .sandbox
@@ -125,8 +151,8 @@ h1, h2, h3, h4, p, span, a
 	background-image: url("../images/menu-bg.png")
 	position: absolute
 	left: 20px
-	top: 20px
-	bottom: 15px
+	margin-top: 20px
+	margin-bottom: 20px
 	z-index: 1
 	@include border-radius(4px)
 
@@ -170,15 +196,36 @@ h1, h2, h3, h4, p, span, a
 			text-decoration: none
 			font-size: 14px
 			font-weight: bold
-			margin-top: 40px
+			margin-top: 20px
 
 			&:hover
 				background-color: #36c3a4
 
 	#controls
-		margin-top: 20px
 		overflow: hidden
 		text-align: center
+
+	ul.sub-rooms
+		display: none
+		position: absolute
+		top: 66px
+		width: 100%
+		background-color: #333
+		z-index: 1
+
+		&.active
+			display: block
+
+		li 
+			color: white
+			height: 30px
+			line-height: 30px
+			font-size: 12px
+			display: block
+			cursor: pointer
+
+			&:hover 
+				background-color: #2fa88e
 
 	.button
 		color: white
@@ -190,6 +237,7 @@ h1, h2, h3, h4, p, span, a
 		@include transition-duration(0.20s)
 		width: 100px
 		display: inline-block
+		position: relative
 
 		span 
 			background-image: url("../images/sprites.png")
@@ -224,10 +272,7 @@ h1, h2, h3, h4, p, span, a
 
 		&.add-sauna
 			span
-				background-position: 0px -120px
-
-		&:hover 
-			opacity: 0.7
+				background-position: -40px -120px
 
 #wrapper
 	position: relative
