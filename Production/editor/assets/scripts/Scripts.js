@@ -210,7 +210,7 @@ roomPricesCalculated[5] = 0.0 ;
 	
 	function setDrag(d) {
 		d.draggable({ cursor: "move", snap: true, containment: "#sandbox", 
-			grid: [ 20,20 ] }).resizable({  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
+			}).resizable({  resize: function( event, ui ){resizedBlock(event, ui)} });
 	}
 		
 	function addRoom(name, id) {
