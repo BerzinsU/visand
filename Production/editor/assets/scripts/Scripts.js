@@ -55,7 +55,7 @@ roomPricesCalculated[5] = 0.0 ;
 		});
 
 		$(".add-garage").click(function() {
-			addRoom("Garage", "garage");			
+			addRoom("Garage48", "garage");			
 		});
 
 		$(".add-sauna").click(function() {
