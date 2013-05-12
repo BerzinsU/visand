@@ -36,38 +36,24 @@ h1, h2, h3, h4, p, span, a
 	@include room
 
 #living-room
-	min-width: 300px
-	min-height: 200px
+	width: 300px
+	height: 200px
 	background-image: url("../roomplans/LIVINGROOM_FULL.png")
 	background-size: 300px 200px
 	@include room
 
 #bathroom
-	min-width: 125px
-	min-height: 125px
+	width: 125px
+	height: 125px
 	background-image: url("../roomplans/BATHROOM_2.png")
 	background-size: 125px 125px
 	@include room
 
 
 #bedroom
-	min-width: 250px
-	min-height: 175px
+	width: 250px
+	height: 175px
 	background-image: url("../roomplans/BEDROOM_FULL_2.png")
-	background-size: 250px 175px
-	@include room
-
-#garage
-	min-width: 325px
-	min-height: 175px
-	background-image: url("../roomplans/garage.png")
-	background-size: 240px 90px
-	@include room
-
-#sauna
-	min-width: 250px
-	min-height: 175px
-	background-image: url("../roomplans/sauna.png")
 	background-size: 250px 175px
 	@include room
 
@@ -218,14 +204,6 @@ h1, h2, h3, h4, p, span, a
 		&.add-bedroom
 			span
 				background-position: -40px -40px
-
-		&.add-garage
-			span
-				background-position: 0px -120px
-
-		&.add-sauna
-			span
-				background-position: -40px -120px
 
 		&:hover 
 			opacity: 0.7
