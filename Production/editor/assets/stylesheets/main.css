@@ -1,0 +1,593 @@
+/* line 17, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+body {
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  background-image: url("../images/body-bg.png");
+}
+
+/* line 15, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+h1, h2, h3, h4, p, span, a {
+  -webkit-font-smoothing: 1px;
+}
+
+/* line 31, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#kitchen {
+  min-width: 200px;
+  min-height: 200px;
+  background-image: url("../roomplans/dining.png");
+  background-size: 200px 200px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+/* line 38, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#living-room {
+  width: 300px;
+  height: 200px;
+  background-image: url("../roomplans/LIVINGROOM_FULL.png");
+  background-size: 300px 200px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+/* line 45, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#bathroom {
+  width: 125px;
+  height: 125px;
+  background-image: url("../roomplans/BATHROOM_2.png");
+  background-size: 125px 125px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+/* line 52, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#bedroom {
+  width: 250px;
+  height: 175px;
+  background-image: url("../roomplans/BEDROOM_FULL_2.png");
+  background-size: 250px 175px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+/* line 59, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#garage {
+  width: 325px;
+  height: 175px;
+  background-image: url("../roomplans/garage.png");
+  background-size: 240px 80px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+/* line 66, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#sauna {
+  width: 100px;
+  height: 200px;
+  background-image: url("../roomplans/sauna.png");
+  background-size: 100px 200px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+/* line 73, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.sandbox {
+  width: auto;
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  left: 299px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+/* line 84, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.sandbox .drag {
+  -webkit-transition-property: left, top;
+  -moz-transition-property: left, top;
+  -o-transition-property: left, top;
+  transition-property: left, top;
+  -webkit-transition-duration: 0.05s;
+  -moz-transition-duration: 0.05s;
+  -o-transition-duration: 0.05s;
+  transition-duration: 0.05s;
+  overflow: hidden;
+  border: 2px solid #333333;
+}
+/* line 91, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.sandbox .drag img {
+  display: block;
+}
+/* line 94, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.sandbox .drag .ui-resizable, .sandbox .drag .ui-icon-gripsmall-diagonal-se, .sandbox .drag .ui-resizable-e, .sandbox .drag .ui-resizable-s, .sandbox .drag .SqMeter {
+  border: 0;
+}
+/* line 97, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.sandbox .drag.ui-draggable-dragging {
+  border: 1px solid red !important;
+}
+/* line 100, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.sandbox .drag .info {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+/* line 111, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.sandbox .drag .info p {
+  display: block;
+  font-size: 14px;
+  clear: both;
+}
+/* line 116, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.sandbox .drag .info p:first-child {
+  font-weight: bold;
+}
+/* line 119, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.sandbox .drag:hover .info {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  background-image: url("../images/trans.png");
+}
+
+/* line 123, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu {
+  width: 259px;
+  background-image: url("../images/menu-bg.png");
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  bottom: 15px;
+  z-index: 1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 133, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu #logo {
+  display: block;
+}
+/* line 136, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .summary {
+  overflow: hidden;
+  clear: both;
+  margin: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #333333;
+}
+/* line 143, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .summary h3 {
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+/* line 149, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .summary span {
+  color: white;
+  font-size: 14px;
+  display: block;
+}
+/* line 154, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .summary span sup {
+  font-size: 12px;
+  position: relative;
+  top: -3px;
+}
+/* line 159, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .summary a.share {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  background-color: #2fa88e;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  width: auto;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+/* line 175, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .summary a.share:hover {
+  background-color: #36c3a4;
+}
+/* line 178, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu #controls {
+  margin-top: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 183, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button {
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  float: left;
+  margin-top: 20px;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  width: 100px;
+  display: inline-block;
+}
+/* line 194, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button span {
+  background-image: url("../images/sprites.png");
+  width: 40px;
+  height: 35px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+/* line 202, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button p {
+  font-size: 14px;
+}
+/* line 206, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button.add-kitchen span {
+  background-position: -40px 0px;
+}
+/* line 210, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button.add-livingroom span {
+  background-position: 0px 0px;
+}
+/* line 214, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button.add-bathroom span {
+  background-position: 0px -40px;
+}
+/* line 218, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button.add-bedroom span {
+  background-position: -40px -40px;
+}
+/* line 222, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button.add-garage span {
+  background-position: 0px -120px;
+}
+/* line 226, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button.add-sauna span {
+  background-position: 0px -120px;
+}
+/* line 229, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.Menu .button:hover {
+  opacity: 0.7;
+}
+
+/* line 232, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#wrapper {
+  position: relative;
+  height: 100%;
+}
+
+/* line 236, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.inside {
+  padding: 25px;
+}
+/* line 239, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.inside.big {
+  padding: 50px;
+}
+
+/* line 242, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 247, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.table-cell {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* line 253, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.trash {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  background-image: url("../images/sprites.png");
+  background-repeat: no-repeat;
+  background-position: 0px -80px;
+  background-color: transparent;
+  border: 0px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+/* line 267, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.trash.deleting {
+  background-color: red;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 271, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+.viewPane {
+  background-color: transparent;
+  width: 5000px;
+  height: 5000px;
+  margin-left: -2500px;
+  margin-top: -2500px;
+}
+
+/* line 278, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#send-project {
+  background-image: url("../images/trans-black.png");
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+  display: none;
+}
+/* line 288, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#send-project .window {
+  width: 500px;
+  height: 400px;
+  padding-top: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -200px;
+  background-color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 300, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#send-project .window p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2fa88e;
+}
+/* line 305, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#send-project .close {
+  background-image: url("../images/sprites.png");
+  background-repeat: no-repeat;
+  background-position: -40px -80px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+/* line 319, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#send-project .close:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+
+/* line 322, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#email {
+  margin-top: 50px;
+}
+/* line 325, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#email input {
+  -webkit-appearance: none;
+  border: 0px;
+  background: none;
+  outline: none;
+  font-size: 18px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 100%;
+}
+/* line 339, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#email .input {
+  position: relative;
+  height: 50px;
+  width: 80%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #2fa88e;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* line 350, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#email .input input {
+  left: 10px;
+}
+/* line 353, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#email .submit {
+  position: relative;
+  height: 50px;
+  width: 20%;
+  float: left;
+  background-color: #2fa88e;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 361, C:/wamp/www/visand/Production/editor/assets/sass/main.sass */
+#email .submit input {
+  color: white;
+  cursor: pointer;
+}
