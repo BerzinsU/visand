@@ -154,7 +154,9 @@ roomPricesCalculated[5] = 0.0 ;
 
 
   function getpriceForRoom(div){
-    if(div.parentElement.parentElement.parentElement.parentElement.id == "bathroom"){
+    if(div.parentElement.parentElement.parentElement.parentElement.id == "bathroom-bath" ||
+    	div.parentElement.parentElement.parentElement.parentElement.id == "bathroom-shower")
+    {
       roomPricesCalculated[0]= roomPricesCalculated[0]+ (roomPrices[0]*parseFloat(div.innerHTML));
     }
     if(div.parentElement.parentElement.parentElement.parentElement.id == "kitchen"){

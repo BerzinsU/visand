@@ -5,16 +5,15 @@
 
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
 
-<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+        <script src="assets/scripts/jquery-1.9.1.min.js"></script>
+        <script src="assets/scripts/jquery-ui.js"></script>
 <script src="https://raw.github.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
 
 		<script src="http://jqueryrotate.googlecode.com/files/jQueryRotate.2.2.js" type="text/javascript"></script>
-        <script src="./Scripts.js"></script>
+        <script src="assets/scripts/Scripts.js"></script>
 
-        
 
     </head>
 
@@ -27,24 +26,56 @@
 
                 <div class="inside">
 
-                    <img id="logo" src="images/logo.png" />
+                    <img id="logo" src="assets/images/logo.png" />
 
                     <div id="controls">
 						<div class="button add-kitchen">
                             <span></span>
                             <p>Kitchen</p>
                         </div>
-                        <div class="button add-livingroom">
+                        <div class="button add-living-room has-sub">
                             <span></span>
                             <p>Living room</p>
+
+                            <ul class="sub-rooms" id="livingroom">
+                                <li></li>
+                                <li class="add-livingroom-solo">Solo</li>
+                                <li class="add-livingroom-kitchen">With kitchen</li>
+                            </ul>
+
                         </div>
-                        <div class="button add-bathroom">
+
+                        <div class="button add-bathroom has-sub">
                             <span></span>
                             <p>Bathroom</p>
+
+                            <ul class="sub-rooms" id="bathroom">
+                                <li></li>
+                                <li class="add-bathroom-shower">Shower</li>
+                                <li class="add-bathroom-bath">Bath</li>
+                            </ul>
+
                         </div>
-                        <div class="button add-bedroom">
+
+                        <div class="button add-bedroom has-sub">
                             <span></span>
                             <p>Bedroom</p>
+
+                            <ul class="sub-rooms" id="bedroom">
+                                <li></li>
+                                <li class="add-bedroom-master">Master</li>
+                                <li class="add-bedroom-small">Small</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="button add-garage">
+                            <span></span>
+                            <p>Garage</p>
+                        </div>
+                        <div class="button add-sauna">
+                            <span></span>
+                            <p>Sauna</p>
                         </div>
                     </div>
 

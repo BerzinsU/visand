@@ -10,7 +10,7 @@ body, html
 
 p, a, h1
 	-webkit-font-smoothing: antialiased
-	-webkit-transform:translate3d(0, 0, 0)
+	-webkit-transform: translate3d(0, 0, 0)
 
 a 
 	text-decoration: none
@@ -23,8 +23,9 @@ a
 	text-align: center
 	background-image: url("../images/header-bg.png")
 
-	img 
+	#logo 
 		display: inline-block
+		cursor: pointer
 
 #content
 	width: 100%
@@ -115,6 +116,14 @@ a
 				&.facebook 
 					background-position: -25px 0px
 					margin-left: 5px
+
+			p 
+				font-size: 14px
+				display: block
+				float: left
+				line-height: 25px
+				color: #666
+				margin-right: 10px
 
 
 .table
