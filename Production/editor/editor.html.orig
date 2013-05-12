@@ -21,7 +21,11 @@
         <script src="jquery.hammer.js"></script>
         <script src="modernizr.js"></script>
         <script src="jquery.finger.js"></script>
+<<<<<<< HEAD:Production/editor/editor.html.orig
 >>>>>>> 66dbbede90e7c8f278cf417d33ef6444f8e40b41
+=======
+        <script src="jquery.ui.touch-punch>"></script>
+>>>>>>> f19898b508404100875162efe6b0d5d5e8018b9b:editor/editor.html
 
     </head>
 
@@ -130,15 +134,5 @@
                 </div>
             </div>
         </div>
-<script>
-    $('.viewPane').on('tap', function() {
-        $(this).find('p').css('background', 'red');
-
-    });
-
-    $('body').on('tap', '.viewPane', function() {
-
-    });
-</script>
     </body>
 </html>
