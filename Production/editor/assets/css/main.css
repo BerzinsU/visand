@@ -107,10 +107,10 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #garage {
-  min-width: 325px;
-  min-height: 175px;
-  background-image: url("../roomplans/other/garage.png");
-  background-size: 220px 90px;
+  min-width: 550px;
+  min-height: 350px;
+  background-image: url("../roomplans/other/garage48.png");
+  background-size: 550px 350px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -231,10 +231,13 @@ h1, h2, h3, h4, p, span, a {
   overflow: auto;
   position: absolute;
   left: 299px;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
   overflow: hidden;
+  background-image: url(../images/watermark.png);
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 .sandbox .drag {
   -webkit-transition-property: left, top;
@@ -284,6 +287,11 @@ h1, h2, h3, h4, p, span, a {
   font-weight: bold;
 }
 .sandbox .drag:hover .info {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  background-image: url("../images/trans.png");
+}
+.sandbox .drag.touchhover .info {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   background-image: url("../images/trans.png");
@@ -367,6 +375,7 @@ h1, h2, h3, h4, p, span, a {
 .Menu #controls {
   overflow: hidden;
   text-align: center;
+  margin-top: -20px;
 }
 .Menu ul.sub-rooms {
   display: none;

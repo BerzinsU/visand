@@ -44,10 +44,10 @@ h1, h2, h3, h4, p, span, a
 	@include room
 
 #garage
-	min-width: 325px
-	min-height: 175px
-	background-image: url("../roomplans/other/garage.png")
-	background-size: 220px 90px
+	min-width: 550px
+	min-height: 350px
+	background-image: url("../roomplans/other/garage48.png")
+	background-size: 550px 350px
 	@include room
 
 // Living room
@@ -102,10 +102,13 @@ h1, h2, h3, h4, p, span, a
 	overflow: auto
 	position: absolute
 	left: 299px
-	right: 0
-	top: 0
-	bottom: 0
+	right: 20px
+	top: 20px
+	bottom: 20px
 	overflow: hidden
+	background-image: url(../images/watermark.png)
+	background-position: top right
+	background-repeat: no-repeat
 
 	.drag 
 		@include transition-property(left, top)
@@ -141,6 +144,11 @@ h1, h2, h3, h4, p, span, a
 				&:first-child 
 					font-weight: bold
 		&:hover
+			.info 
+				@include opacity(1)
+				background-image: url("../images/trans.png")
+
+		&.touchhover
 			.info 
 				@include opacity(1)
 				background-image: url("../images/trans.png")
@@ -209,6 +217,7 @@ h1, h2, h3, h4, p, span, a
 	#controls
 		overflow: hidden
 		text-align: center
+		margin-top: -20px
 
 	ul.sub-rooms
 		display: none
