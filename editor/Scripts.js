@@ -1,16 +1,22 @@
 
 var sizeCoificient = 0.0004;
 var roomPrices = new Array();
-roomPrices[0] = 1600;
-roomPrices[1] = 1200;
-roomPrices[2] = 800;
-roomPrices[3] = 700;
+roomPrices[0] = 1600;//bathroom
+roomPrices[1] = 1200;//kitchen
+roomPrices[2] = 800;//livingroom
+roomPrices[3] = 700;//bedroom
+roomPrices[4] = 400;//garage
+roomPrices[5] = 1000;//sauna
+
 
 var roomPricesCalculated = new Array();
 roomPricesCalculated[0] = 0.0  ;
 roomPricesCalculated[1] = 0.0 ;
 roomPricesCalculated[2] = 0.0 ;
 roomPricesCalculated[3] = 0.0 ;
+roomPricesCalculated[4] = 0.0 ;
+roomPricesCalculated[5] = 0.0 ;
+
 	 $(function() { 
 
 		$("a.share").click(function(){
@@ -58,6 +64,14 @@ roomPricesCalculated[3] = 0.0 ;
 
 		$(".add-bedroom").click(function() {
 			addRoom("Bedroom", "bedroom");			
+		});
+
+		$(".add-garage").click(function() {
+			addRoom("Garage", "garage");			
+		});
+
+		$(".add-sauna").click(function() {
+			addRoom("Sauna", "sauna");			
 		});
 
 		

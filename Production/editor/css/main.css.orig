@@ -1,0 +1,205 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+
+#draggable {
+  width: 273px;
+  height: 195px;
+  background-image: url("../roomplans/dining.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#draggable2 {
+  width: 273px;
+  height: 195px;
+  background-image: url("../roomplans/LIVINGROOM_FULL.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#draggable3 {
+  width: 273px;
+  height: 195px;
+  background-image: url("../roomplans/BEDROOM_FULL_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#draggable4 {
+  width: 100px;
+  height: 100px;
+}
+
+#droppable5 {
+  width: 150px;
+  height: 150px;
+}
+
+#draggable6 {
+  width: 60px;
+  height: 20px;
+}
+
+.sandbox {
+  background-color: #fefefe;
+  width: auto;
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  left: 250px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url("../roomplans/grid.png");
+}
+.sandbox div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-property: left, top;
+  -moz-transition-property: left, top;
+  -o-transition-property: left, top;
+  transition-property: left, top;
+<<<<<<< HEAD
+  -webkit-transition-duration: 0.05s;
+  -moz-transition-duration: 0.05s;
+  -o-transition-duration: 0.05s;
+  transition-duration: 0.05s;
+=======
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  border: 1px solid black;
+>>>>>>> 4df2f593f10e9daf6f7977d8735558c0dc65d7e8
+  overflow: hidden;
+}
+.sandbox div img {
+  display: block;
+}
+<<<<<<< HEAD
+.sandbox div .ui-resizable, .sandbox div .ui-icon-gripsmall-diagonal-se, .sandbox div .ui-resizable-e, .sandbox div .ui-resizable-s, .sandbox div .SqMeter {
+=======
+.sandbox div .ui-icon-gripsmall-diagonal-se {
+>>>>>>> 4df2f593f10e9daf6f7977d8735558c0dc65d7e8
+  border: 0;
+}
+.sandbox div.ui-draggable-dragging {
+  border: 1px solid red !important;
+}
+.sandbox div .info {
+  text-align: center;
+  display: none;
+}
+.sandbox div .info span {
+  display: inline-block;
+}
+.sandbox div:hover .info {
+  display: block;
+}
+
+.Menu {
+  width: 250px;
+  height: 100%;
+  background-color: #333333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.Menu .summary {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.Menu .summary span {
+  color: white;
+}
+
+.SqMeter {
+  float: left;
+}
+
+#wrapper {
+  position: relative;
+  height: 100%;
+}
+
+<<<<<<< HEAD
+.trash {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+}
+=======
+
+
+
+
+>>>>>>> 4df2f593f10e9daf6f7977d8735558c0dc65d7e8
