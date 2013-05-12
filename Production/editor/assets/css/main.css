@@ -124,6 +124,8 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #livingroom-solo {
+  min-width: 300px;
+  min-height: 200px;
   background-image: url("../roomplans/livingroom/solo.png");
   background-size: 300px 200px;
   -webkit-box-sizing: border-box;
@@ -343,10 +345,10 @@ h1, h2, h3, h4, p, span, a {
 .Menu ul.sub-rooms {
   display: none;
   position: absolute;
-  top: 66px;
+  top: 58px;
   width: 100%;
-  background-color: #333333;
   z-index: 1;
+  color: white;
 }
 .Menu ul.sub-rooms.active {
   display: block;
@@ -358,9 +360,19 @@ h1, h2, h3, h4, p, span, a {
   font-size: 12px;
   display: block;
   cursor: pointer;
+  background-color: #2fa88e;
+}
+.Menu ul.sub-rooms li:first-child {
+  background-image: url("../images/sub-rooms-arrow.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  height: 10px;
+  display: block;
+  width: 100%;
 }
 .Menu ul.sub-rooms li:hover {
-  background-color: #2fa88e;
+  background-color: #36c3a4;
 }
 .Menu .button {
   color: white;
@@ -402,6 +414,12 @@ h1, h2, h3, h4, p, span, a {
 }
 .Menu .button.add-bedroom span {
   background-position: -40px -40px;
+}
+.Menu .button.add-garage span {
+  background-position: 0px -120px;
+}
+.Menu .button.add-sauna span {
+  background-position: -40px -120px;
 }
 
 #wrapper {

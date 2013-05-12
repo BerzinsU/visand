@@ -5,4 +5,9 @@ $(document).ready(function()
 	$("#header").height(h);
 	$("#content").css("top", h);
 
+	$("#logo").click(function()
+	{
+		$("html, body").animate({ scrollTop: $('#get-now').offset().top }, 700);
+	});
+
 });
