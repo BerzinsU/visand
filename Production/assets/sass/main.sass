@@ -1,166 +1,187 @@
 @import "compass/reset"
 @import "compass/css3"
 
+@mixin respond-to($media)
+    @if $media == handhelds
+        @media only screen and (max-width: 480px)
+            @content
+
+    @else if $media == tablets
+        @media only screen and (min-width: 481px) and (max-width: 1023px)
+            @content
+
+    @else if $media == desktop
+        @media only screen and (min-width: 1024px)
+            @content
+
+    @else if $media == all
+        @media only screen and (max-width: 1023px)
+            @content
+
 body, html
-	width: 100%
-	height: 100%
-	font-family: 'Roboto', sans-serif
-	line-height: 1.5
-	letter-spacing: 0.1em
+    width: 100%
+    height: 100%
+    font-family: 'Roboto', sans-serif
+    line-height: 1.5
+    letter-spacing: 0.1em
 
 p, a, h1
-	-webkit-font-smoothing: antialiased
-	// -webkit-transform: translate3d(0, 0, 0)
+    -webkit-font-smoothing: antialiased
+    -webkit-transform: translate3d(0, 0, 0)
 
 a 
-	text-decoration: none
+    text-decoration: none
+
 
 #header
-	position: absolute
-	top: 0
-	color: white
-	width: 100%
-	text-align: center
-	background-image: url("../images/header-bg.png")
+    position: absolute
+    top: 0
+    color: white
+    width: 100%
+    text-align: center
+    background-image: url("../images/header-bg.png")
 
-	#logo 
-		display: inline-block
-		cursor: pointer
+    #logo 
+        display: inline-block
+        cursor: pointer
 
-	#slogan
-		font-size: 12px
-		line-height: 30px
-		height: 30px
-		font-weight: 300
-		display: block
+    #slogan
+        font-size: 12px
+        line-height: 30px
+        height: 30px
+        font-weight: 300
+        display: block
 
 
 #content
-	width: 100%
-	position: absolute
+    width: 100%
+    position: absolute
 
-	#get-now
-		background-color: #2eb89a
-		overflow: hidden
-		padding-top: 50px
-		padding-bottom: 50px
+    #get-now
+        background-color: #2eb89a
+        overflow: hidden
+        padding-top: 50px
+        padding-bottom: 50px
 
-		h1 
-			font-size: 18px
-			text-transform: uppercase
-			color: white
-			font-weight: 300
-			width: 60%
-			float: left
+        h1 
+            font-size: 18px
+            text-transform: uppercase
+            color: white
+            font-weight: 300
+            width: 60%
+            float: left
 
-		a.try
-			display: inline-block 
-			float: right
-			height: 50px
-			@include border-radius(4px)
-			background-color: #175c4d
-			color: white
-			text-align: center
-			font-weight: 700
-			line-height: 50px
-			padding-left: 50px
-			padding-right: 50px
-			font-size: 24px
-			@include transition-property(background-color)
-			@include transition-duration(0.20s)
+        a.try
+            display: inline-block 
+            float: right
+            height: 50px
+            @include border-radius(4px)
+            background-color: #175c4d
+            color: white
+            text-align: center
+            font-weight: 700
+            line-height: 50px
+            padding-left: 50px
+            padding-right: 50px
+            font-size: 24px
+            @include transition-property(background-color)
+            @include transition-duration(0.20s)
 
-			&:hover 
-				background-color: #1d7562
+            &:hover 
+                background-color: #1d7562
 
-	#info
-		overflow: hidden
-		padding-top: 50px
+    #info
+        overflow: hidden
+        padding-top: 50px
 
-		.item
-			float: left
-			width: 30%
-			margin-left: 5%
+        .item
+            float: left
+            width: 30%
+            margin-left: 5%
 
-			&:first-child 
-				margin-left: 0
+            &:first-child 
+                margin-left: 0
 
-			h2 
-				font-size: 18px
-				text-transform: uppercase
-				font-weight: 700
-				margin-bottom: 15px
-				color: #333
+            h2 
+                font-size: 18px
+                text-transform: uppercase
+                font-weight: 700
+                margin-bottom: 15px
+                color: #333
 
-			p 
-				font-size: 14px
-				font-weight: 300
-				color: #333
+            p 
+                font-size: 14px
+                font-weight: 300
+                color: #333
 
-	#footer
-		padding-bottom: 50px
-		padding-top: 25px
-		margin-top: 75px
-		border-top: 1px solid #ccc
+    #footer
+        padding-bottom: 50px
+        padding-top: 25px
+        margin-top: 75px
+        border-top: 1px solid #ccc
 
-		#copyright
-			float: left
+        #copyright
+            float: left
 
-			p, a
-				font-size: 12px
-				color: #999
-				display: block
-				float: left
+            p, a
+                font-size: 12px
+                color: #999
+                display: block
+                float: left
 
-			a 
-				margin-left: 20px
-				@include transition-property(color)
-				@include transition-duration(0.20s)
+            a 
+                margin-left: 20px
+                @include transition-property(color)
+                @include transition-duration(0.20s)
 
-				&:hover 
-					color: #175c4d
+                &:hover 
+                    color: #175c4d
 
-		#social
-			float: right
+        #social
+            float: right
 
-			a
-				width: 25px
-				height: 25px
-				display: block
-				background-image: url("../images/social.png")
-				background-repeat: no-repeat
-				float: left
+            a
+                width: 25px
+                height: 25px
+                display: block
+                background-image: url("../images/social.png")
+                background-repeat: no-repeat
+                float: left
 
-				&.twitter 
-					background-position: 0px 0px
+                &.twitter 
+                    background-position: 0px 0px
 
-				&.facebook 
-					background-position: -25px 0px
-					margin-left: 5px
+                &.facebook 
+                    background-position: -25px 0px
+                    margin-left: 5px
 
-				span 
-					display: none
+                span 
+                    display: none
 
-			p 
-				font-size: 12px
-				display: block
-				float: left
-				line-height: 25px
-				color: #666
-				margin-right: 10px
+            p 
+                font-size: 12px
+                display: block
+                float: left
+                line-height: 25px
+                color: #666
+                margin-right: 10px
 
 
 .table
-	display: table
-	width: 100%
-	height: 100%
-	background-image: url(../images/mood.png)
+    display: table
+    width: 100%
+    height: 100%
+    background-image: url(../images/mood.png)
 
 .table-cell
-	display: table-cell
-	width: 100%
-	height: 100%
-	vertical-align: middle
+    display: table-cell
+    width: 100%
+    height: 100%
+    vertical-align: middle
 
 .wrapper
-	max-width: 960px
-	margin: auto
+    max-width: 960px
+    margin: auto
+    
+    @include respond-to(tablets)
+        padding: 5%
