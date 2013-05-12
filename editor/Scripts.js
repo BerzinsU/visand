@@ -66,6 +66,14 @@ roomPricesCalculated[5] = 0.0 ;
 			addRoom("Bedroom", "bedroom");			
 		});
 
+		$(".add-garage").click(function() {
+			addRoom("Garage", "garage");			
+		});
+
+		$(".add-sauna").click(function() {
+			addRoom("Sauna", "sauna");			
+		});
+
 		
 		$(".trash" ).droppable({
       		hoverClass: "deleting",       
