@@ -100,6 +100,10 @@ roomPricesCalculated[5] = 0.0 ;
                 }
             });
 
+            $('.drag').on('tap', function() {
+        $(this).find('p').css('background', 'red');
+    });
+
 	});
 
 	var SqSumma = 0.0;
@@ -119,7 +123,7 @@ roomPricesCalculated[5] = 0.0 ;
         });
 
         CalculateSum();
-    }
+    } 
 
 
 
