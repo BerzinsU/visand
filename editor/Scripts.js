@@ -113,6 +113,7 @@ roomPricesCalculated[3] = 0.0 ;
 
         [].slice.call( SqMeter ).forEach(function ( div ) {
             div.innerHTML = (sqPixels * sizeCoificient).toFixed(2) + " m<sup>2</sup>";
+            getpriceForRoom(div);
         });
 
         CalculateSum();

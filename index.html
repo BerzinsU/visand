@@ -1,50 +1,23 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1" />
+		<title>visand</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+		<script type="text/javascript" src="assets/scripts/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/main.js"></script>
 
-    <head>
+	</head>
 
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/main.css" />
+	<body>
 
-        <script src="jquery-1.9.1.min.js"></script>
-        <script src="jquery-ui.js"></script>
-		<script src="http://jqueryrotate.googlecode.com/files/jQueryRotate.2.2.js" type="text/javascript"></script>
-        <script src="Scripts.js"></script>
-        <script src="hammer.js"></script>
-        <script src="jquery.hammer.js"></script>
-        <script src="modernizr.js"></script>
-
-    </head>
-
-    <body onload="CalculateWholeSum()">
-
-        <div id="wrapper">
-
-            <!-- Menu -->
-            <div class="Menu">
-
-                <div class="inside">
-
-                    <img id="logo" src="images/logo.png" />
-
-                    <div id="controls">
-						<div class="button add-kitchen">
-                            <span></span>
-                            <p>Kitchen</p>
-                        </div>
-                        <div class="button add-livingroom">
-                            <span></span>
-                            <p>Living room</p>
-                        </div>
-                        <div class="button add-bathroom">
-                            <span></span>
-                            <p>Bathroom</p>
-                        </div>
-                        <div class="button add-bedroom">
-                            <span></span>
-                            <p>Bedroom</p>
-                        </div>
+		<div id="header">
+			<div class="table">
+				<div class="table-cell">
+					<img src="assets/images/logo.png">
+				</div>
 
                         <div class="button add-garage">
                             <span></span>
@@ -56,57 +29,56 @@
                             <p>Sauna</p>
                         </div>
 
-                    </div>
+			</div>
 
-                </div>
+		</div>
 
-                <div class="summary">
-                    <h3>My dream house project</h3>
-                    <span class="SqSum"id="SqSum">00</span>
-                    <span class="TotalPrice" id="TotalPrice">00</span>
+		<div id="content">
 
-                    <a class="share" href="#">Send to architect</a>
-
-                </div>
-
-            </div>
-
-            <!-- Sandbox -->
-            <div class="sandbox" id="sandbox">
-
-			<div class="viewPane" id="viewPane" > </div>
-
-				<div class="trash ui-widget-content">					
+			<div id="get-now">
+				<div class="wrapper">
+					<h1>Designing your dream house has never been easier - just drag and drop and go!</h1>
+					<a class="try" href="editor/editor.html">Try it now!</a>
 				</div>
+			</div>
 
-            </div>
-        </div>
+			<div id="info">
+				<div class="wrapper">
 
-        <!-- Send to architect -->
-        <div id="send-project">
-            <div class="window">
-                <div class="close"></div>
-                <div class="inside big">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                        Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa.
-                         Sed eleifend nonummy diam.</p>
+					<div class="item">
+						<h2>PLAN & DESIGN</h2>
+						<p>Visand will be usable from computers and tablets without the need to install an app or plugin - all You need is an imagination and a web browser.</p>
+					</div>
 
-                    <div id="email">
-                        <form acdtion="">
-                            <div class="input">
-                                <input type="text" placeholder="Architect email" />
-                            </div>
-                            <div class="submit">
-                                <input type="submit" value="Send" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-<input type="button" 
-  onClick="window.print()" 
-  value="Print This Page"/>
+					<div class="item">
+						<h2>PLAN & DESIGN</h2>
+						<p>Visand will be usable from computers and tablets without the need to install an app or plugin - all You need is an imagination and a web browser.</p>
+					</div>
 
-    </body>
+					<div class="item">
+						<h2>PLAN & DESIGN</h2>
+						<p>Visand will be usable from computers and tablets without the need to install an app or plugin - all You need is an imagination and a web browser.</p>
+					</div>
+
+				</div>
+			</div>
+
+			<div id="footer">
+				<div class="wrapper">
+
+					<div id="copyright">
+						<p>© Visand 2013
+					</div>
+
+					<div id="social">
+						<a class="twitter" href=""></a>
+						<a class="facebook" href=""></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
 </html>
