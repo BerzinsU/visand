@@ -86,7 +86,7 @@ roomPricesCalculated[5] = 0.0 ;
 			addRoom("Living room - kitchen", "livingroom-kitchen");			
 		});
 
-		$(".has-sub").click(function()
+		$(".button").click(function()
 		{
 			$(this).toggleClass("active");
 			$(this).find(".sub-rooms").fadeToggle("fast");
