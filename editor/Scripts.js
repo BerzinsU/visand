@@ -66,45 +66,35 @@ roomPricesCalculated[5] = 0.0 ;
 			addRoom("Bedroom", "bedroom");			
 		});
 
-		$(".add-garage").click(function() {
-			addRoom("Garage", "garage");			
-		});
-
-		$(".add-sauna").click(function() {
-			addRoom("Sauna", "sauna");			
-		});
-
 		
 		$(".trash" ).droppable({
-      		hoverClass: "deleting",       
+	  		hoverClass: "deleting",       
 			tolerance: "touch", 
+			accept: ".drag",
 			drop: function( event, ui ) {			
-      if(ui.draggable[0].id != "viewPane")			
-      {	
-				$(ui.draggable).remove();
-        CalculateWholeSum();
-      }
+		      if(ui.draggable[0].id != "viewPane")			
+		      {	
+						$(ui.draggable).remove();
+		        CalculateWholeSum();
+		      }
+		      else{
+
+		      }
 			}
 		});
 
-     $(".drag")
-            .hammer({ drag_max_touches:0})
-            .on("touch drag", function(ev) {
-                var touches = ev.gesture.touches;
-
-                ev.gesture.preventDefault();
-
-                for(var t=0,len=touches.length; t<len; t++) {
-                    var target = $(touches[t].target);
-                    target.css({
-                        zIndex: 1337,
-                        left: touches[t].pageX-50,
-                        top: touches[t].pageY-50
-                    });
-                }
-            });
-
 	});
+
+    
+
+    $('.viewPane').on('tap', function() {
+        $(this).find('p').css('background', 'red');
+
+    });
+
+    $('body').on('tap', '.viewPane', function() {
+
+    });
 
 	var SqSumma = 0.0;
 
@@ -118,35 +108,31 @@ roomPricesCalculated[5] = 0.0 ;
          var SqMeter =  master.getElementsByClassName('SqMeter');
 
         [].slice.call( SqMeter ).forEach(function ( div ) {
-            div.innerHTML = (sqPixels * sizeCoificient).toFixed(2) + " m<sup>2</sup>";
+            e.element[0].children[0].children[0].children[0].children[1].innerHTML = (sqPixels * sizeCoificient).toFixed(2) + " m<sup>2</sup>";
             getpriceForRoom(div);
         });
 
         CalculateSum();
-    }
+    } 
 
 
 
 	function CalculateSum(){
-    roomPricesCalculated[0] = 0.0 ;
-    roomPricesCalculated[1] = 0.0 ;
-    roomPricesCalculated[2] = 0.0 ;
-    roomPricesCalculated[3] = 0.0 ;
-    var SqSumma = 0.0;
-      var SumFields = document.getElementsByClassName('SqMeter');
-        [].slice.call( SumFields ).forEach(function ( div ) {
-            SqSumma = SqSumma + parseFloat(div.innerHTML);
-            getpriceForRoom(div);
-        });
+
+	    ClearPriceArray();
+	    var SqSumma = 0.0;
+	      var SumFields = document.getElementsByClassName('SqMeter');
+	        [].slice.call( SumFields ).forEach(function ( div ) {
+	            SqSumma = SqSumma + parseFloat(div.innerHTML);
+	            getpriceForRoom(div);
+	        });
         document.getElementById('SqSum').innerHTML = "Total m<sup>2</sup>: " + SqSumma.toFixed(2);
         document.getElementById('TotalPrice').innerHTML = "Total price: " + getTotalPrice() + " Eur";
     };
 
     function getBoxSizes(){
-          roomPricesCalculated[0] = 0.0 ;
-          roomPricesCalculated[1] = 0.0 ;
-          roomPricesCalculated[2] = 0.0 ;
-          roomPricesCalculated[3] = 0.0 ;
+
+      ClearPriceArray();
       var SumFields = document.getElementsByClassName('draggable');
         [].slice.call( SumFields ).forEach(function ( div ) {
             div.children[0].children[0].children[0].children[1].innerHTML = 
@@ -159,7 +145,9 @@ roomPricesCalculated[5] = 0.0 ;
       var TotalPrice =  roomPricesCalculated[0] +
                         roomPricesCalculated[1] +
                         roomPricesCalculated[2] +
-                        roomPricesCalculated[3] ;
+                        roomPricesCalculated[3] +
+                        roomPricesCalculated[4] +
+                        roomPricesCalculated[5] ;
 
       return TotalPrice.toFixed(2);
     }
@@ -178,6 +166,13 @@ roomPricesCalculated[5] = 0.0 ;
     if(div.parentElement.parentElement.parentElement.parentElement.id == "bedroom"){
       roomPricesCalculated[3]= roomPricesCalculated[3]+ (roomPrices[3]*parseFloat(div.innerHTML));
     }
+    if(div.parentElement.parentElement.parentElement.parentElement.id == "garage"){
+      roomPricesCalculated[4]= roomPricesCalculated[4]+ (roomPrices[4]*parseFloat(div.innerHTML));
+    }
+    if(div.parentElement.parentElement.parentElement.parentElement.id == "sauna"){
+      roomPricesCalculated[5]= roomPricesCalculated[5]+ (roomPrices[5]*parseFloat(div.innerHTML));
+    }
+
 
   }
 	
@@ -219,5 +214,14 @@ roomPricesCalculated[5] = 0.0 ;
     {
       getBoxSizes();
       CalculateSum();
+    }
+
+    function ClearPriceArray(){
+    	roomPricesCalculated[0] = 0.0 ;
+	    roomPricesCalculated[1] = 0.0 ;
+	    roomPricesCalculated[2] = 0.0 ;
+	    roomPricesCalculated[3] = 0.0 ;
+	    roomPricesCalculated[4] = 0.0 ;
+	    roomPricesCalculated[5] = 0.0 ;
     }
 

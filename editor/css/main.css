@@ -88,8 +88,8 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #living-room {
-  min-width: 300px;
-  min-height: 200px;
+  width: 300px;
+  height: 200px;
   background-image: url("../roomplans/LIVINGROOM_FULL.png");
   background-size: 300px 200px;
   -webkit-box-sizing: border-box;
@@ -104,8 +104,8 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #bathroom {
-  min-width: 125px;
-  min-height: 125px;
+  width: 125px;
+  height: 125px;
   background-image: url("../roomplans/BATHROOM_2.png");
   background-size: 125px 125px;
   -webkit-box-sizing: border-box;
@@ -120,41 +120,9 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #bedroom {
-  min-width: 250px;
-  min-height: 175px;
+  width: 250px;
+  height: 175px;
   background-image: url("../roomplans/BEDROOM_FULL_2.png");
-  background-size: 250px 175px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-}
-
-#garage {
-  min-width: 325px;
-  min-height: 175px;
-  background-image: url("../roomplans/garage.png");
-  background-size: 240px 90px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-}
-
-#sauna {
-  min-width: 250px;
-  min-height: 175px;
-  background-image: url("../roomplans/sauna.png");
   background-size: 250px 175px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -344,12 +312,6 @@ h1, h2, h3, h4, p, span, a {
 }
 .Menu .button.add-bedroom span {
   background-position: -40px -40px;
-}
-.Menu .button.add-garage span {
-  background-position: 0px -120px;
-}
-.Menu .button.add-sauna span {
-  background-position: -40px -120px;
 }
 .Menu .button:hover {
   opacity: 0.7;

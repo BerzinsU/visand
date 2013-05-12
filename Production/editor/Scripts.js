@@ -83,28 +83,18 @@ roomPricesCalculated[5] = 0.0 ;
 			}
 		});
 
-     $(".drag")
-            .hammer({ drag_max_touches:0})
-            .on("touch drag", function(ev) {
-                var touches = ev.gesture.touches;
+	});
 
-                ev.gesture.preventDefault();
+    
 
-                for(var t=0,len=touches.length; t<len; t++) {
-                    var target = $(touches[t].target);
-                    target.css({
-                        zIndex: 1337,
-                        left: touches[t].pageX-50,
-                        top: touches[t].pageY-50
-                    });
-                }
-            });
-
-            $('.drag').on('tap', function() {
+    $('.viewPane').on('tap', function() {
         $(this).find('p').css('background', 'red');
+
     });
 
-	});
+    $('body').on('tap', '.viewPane', function() {
+
+    });
 
 	var SqSumma = 0.0;
 
