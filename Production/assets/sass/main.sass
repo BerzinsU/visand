@@ -105,9 +105,19 @@ a
 		#copyright
 			float: left
 
-			p 
+			p, a
 				font-size: 12px
 				color: #999
+				display: block
+				float: left
+
+			a 
+				margin-left: 20px
+				@include transition-property(color)
+				@include transition-duration(0.20s)
+
+				&:hover 
+					color: #175c4d
 
 		#social
 			float: right
@@ -143,6 +153,7 @@ a
 	display: table
 	width: 100%
 	height: 100%
+	background-image: url(../images/mood.png)
 
 .table-cell
 	display: table-cell
