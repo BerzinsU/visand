@@ -14,6 +14,7 @@
         <script src="assets/scripts/hammer.js"></script>
         <script src="assets/scripts/jquery.hammer.js"></script>
         <script src="assets/scripts/modernizr.js"></script>
+        <script src="jquery.finger.js"></script>
 
     </head>
 
@@ -122,6 +123,15 @@
                 </div>
             </div>
         </div>
+<script>
+    $('.viewPane').on('tap', function() {
+        $(this).find('p').css('background', 'red');
 
+    });
+
+    $('body').on('tap', '.viewPane', function() {
+
+    });
+</script>
     </body>
 </html>
