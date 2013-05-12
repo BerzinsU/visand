@@ -68,14 +68,18 @@ roomPricesCalculated[5] = 0.0 ;
 
 		
 		$(".trash" ).droppable({
-      		hoverClass: "deleting",       
+	  		hoverClass: "deleting",       
 			tolerance: "touch", 
+			accept: ".drag",
 			drop: function( event, ui ) {			
-      if(ui.draggable[0].id != "viewPane")			
-      {	
-				$(ui.draggable).remove();
-        CalculateWholeSum();
-      }
+		      if(ui.draggable[0].id != "viewPane")			
+		      {	
+						$(ui.draggable).remove();
+		        CalculateWholeSum();
+		      }
+		      else{
+
+		      }
 			}
 		});
 
