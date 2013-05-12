@@ -64,7 +64,6 @@ body, html {
 
 p, a, h1 {
   -webkit-font-smoothing: antialiased;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 a {
@@ -82,6 +81,13 @@ a {
 #header #logo {
   display: inline-block;
   cursor: pointer;
+}
+#header #slogan {
+  font-size: 12px;
+  line-height: 30px;
+  height: 30px;
+  font-weight: 300;
+  display: block;
 }
 
 #content {
@@ -157,13 +163,15 @@ a {
 }
 #content #footer {
   padding-bottom: 50px;
-  padding-top: 100px;
+  padding-top: 25px;
+  margin-top: 75px;
+  border-top: 1px solid #cccccc;
 }
 #content #footer #copyright {
   float: left;
 }
 #content #footer #copyright p {
-  font-size: 14px;
+  font-size: 12px;
   color: #999999;
 }
 #content #footer #social {
@@ -184,8 +192,11 @@ a {
   background-position: -25px 0px;
   margin-left: 5px;
 }
+#content #footer #social a span {
+  display: none;
+}
 #content #footer #social p {
-  font-size: 14px;
+  font-size: 12px;
   display: block;
   float: left;
   line-height: 25px;

@@ -79,6 +79,8 @@ h1, h2, h3, h4, p, span, a
 	height: 175px
 	background-image: url("../roomplans/bedroom/small.png")
 	background-size: 150px 175px
+	@include room
+
 // Bath
 #shower
 	width: 175px
@@ -92,6 +94,8 @@ h1, h2, h3, h4, p, span, a
 	height: 125px
 	background-image: url("../roomplans/bathroom/bath.png")
 	background-size: 125px 125px
+	@include room
+
 .sandbox
 	width: auto
 	height: 100%
@@ -146,8 +150,8 @@ h1, h2, h3, h4, p, span, a
 	background-image: url("../images/menu-bg.png")
 	position: absolute
 	left: 20px
-	margin-top: 20px
-	margin-bottom: 20px
+	top: 20px
+	bottom: 20px
 	z-index: 1
 	@include border-radius(4px)
 
