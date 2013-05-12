@@ -53,48 +53,20 @@ roomPricesCalculated[5] = 0.0 ;
 		$(".add-kitchen").click(function() {
 			addRoom("Kitchen", "kitchen");			
 		});
-
-		$(".add-garage").click(function() {
-			addRoom("Garage", "garage");			
+		
+		$(".add-livingroom").click(function() {
+			addRoom("Living room", "living-room");			
 		});
 
-		$(".add-sauna").click(function() {
-			addRoom("Sauna", "sauna");			
+		$(".add-bathroom").click(function() {
+			addRoom("Bathroom", "bathroom");			
 		});
 
-		$(".add-bedroom-master").click(function() {
-			addRoom("Master bedroom", "bedroom-master");			
+		$(".add-bedroom").click(function() {
+			addRoom("Bedroom", "bedroom");			
 		});
 
-		$(".add-bedroom-small").click(function() {
-			addRoom("Small bedroom", "bedroom-small");			
-		});
-
-		$(".add-bathroom-shower").click(function() {
-			addRoom("Shower", "shower");			
-		});
-
-		$(".add-bathroom-bath").click(function() {
-			addRoom("Bath", "bath");			
-		});
-
-		$(".add-livingroom-solo").click(function() {
-			addRoom("Living room - solo", "livingroom-solo");			
-		});
-
-		$(".add-livingroom-kitchen").click(function() {
-			addRoom("Living room - kitchen", "livingroom-kitchen");			
-		});
-
-		$(".has-sub").click(function()
-		{
-			$(this).toggleClass("active");
-			$(this).find(".sub-rooms").fadeToggle("fast");
-			$(this).siblings().removeClass("active");
-			$(this).siblings().find(".sub-rooms").hide();
-		});
-
-
+		
 		$(".trash" ).droppable({
 	  		hoverClass: "deleting",       
 			tolerance: "touch", 
@@ -182,20 +154,18 @@ roomPricesCalculated[5] = 0.0 ;
 
 
   function getpriceForRoom(div){
-   if(div.parentElement.parentElement.parentElement.parentElement.id == "bath" ||
-    	div.parentElement.parentElement.parentElement.parentElement.id == "shower")
+    if(div.parentElement.parentElement.parentElement.parentElement.id == "bathroom-bath" ||
+    	div.parentElement.parentElement.parentElement.parentElement.id == "bathroom-shower")
     {
       roomPricesCalculated[0]= roomPricesCalculated[0]+ (roomPrices[0]*parseFloat(div.innerHTML));
     }
     if(div.parentElement.parentElement.parentElement.parentElement.id == "kitchen"){
       roomPricesCalculated[1]= roomPricesCalculated[1]+ (roomPrices[1]*parseFloat(div.innerHTML));
     }
-    if(div.parentElement.parentElement.parentElement.parentElement.id == "livingroom-kitchen" ||
-    	div.parentElement.parentElement.parentElement.parentElement.id == "livingroom-solo"){
+    if(div.parentElement.parentElement.parentElement.parentElement.id == "living-room"){
       roomPricesCalculated[2]= roomPricesCalculated[2]+ (roomPrices[2]*parseFloat(div.innerHTML));
     }
-    if(div.parentElement.parentElement.parentElement.parentElement.id == "bedroom-master"||
-    	div.parentElement.parentElement.parentElement.parentElement.id == "bedroom-small"){
+    if(div.parentElement.parentElement.parentElement.parentElement.id == "bedroom"){
       roomPricesCalculated[3]= roomPricesCalculated[3]+ (roomPrices[3]*parseFloat(div.innerHTML));
     }
     if(div.parentElement.parentElement.parentElement.parentElement.id == "garage"){
@@ -210,7 +180,7 @@ roomPricesCalculated[5] = 0.0 ;
 	
 	function setDrag(d) {
 		d.draggable({ cursor: "move", snap: true, containment: "#sandbox", 
-			}).resizable({  resize: function( event, ui ){resizedBlock(event, ui)} });
+			grid: [ 20,20 ] }).resizable({  grid: 20, resize: function( event, ui ){resizedBlock(event, ui)} });
 	}
 		
 	function addRoom(name, id) {
