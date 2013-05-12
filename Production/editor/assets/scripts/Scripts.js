@@ -213,7 +213,7 @@ roomPricesCalculated[5] = 0.0 ;
 			}).resizable({  
 				resize: function( event, ui ){resizedBlock(event, ui)},
 			 	start: function( event, ui ){addhover(ui)},
-				end: function( event, ui ){removeClass(ui)}
+				stop: function( event, ui ){removehover(ui)}
 		});
 	}
 		
@@ -265,8 +265,13 @@ roomPricesCalculated[5] = 0.0 ;
 function addhover(obj) {
 	//document.getElementById(obj.element[0].id).addClass("touchHover");
 	$(obj.element[0].id).addClass("touchhover");
+	document.getElementById(obj.element[0].id).className += " touchhover";
 }
 
 function removehover(obj) {
-	$(obj.element[0].id).removeClass("touchhover");
+
+
+	document.getElementById(obj.element[0].id).className =
+   document.getElementById(obj.element[0].id).className.replace
+      ( /(?:^|\s)touchhover(?!\S)/g , '' )
 }
