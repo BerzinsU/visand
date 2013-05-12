@@ -158,8 +158,8 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #bedroom-master {
-  width: 250px;
-  height: 175px;
+  min-width: 250px;
+  min-height: 175px;
   background-image: url("../roomplans/bedroom/master.png");
   background-size: 250px 175px;
   -webkit-box-sizing: border-box;
@@ -175,8 +175,8 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #bedroom-small {
-  width: 150px;
-  height: 175px;
+  min-width: 150px;
+  min-height: 175px;
   background-image: url("../roomplans/bedroom/small.png");
   background-size: 150px 175px;
   -webkit-box-sizing: border-box;
@@ -192,8 +192,8 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #shower {
-  width: 175px;
-  height: 75px;
+  min-width: 175px;
+  min-height: 75px;
   background-image: url("../roomplans/bathroom/shower.png");
   background-size: 175px 75px;
   -webkit-box-sizing: border-box;
@@ -209,8 +209,8 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #bath {
-  width: 125px;
-  height: 125px;
+  min-width: 125px;
+  min-height: 125px;
   background-image: url("../roomplans/bathroom/bath.png");
   background-size: 125px 125px;
   -webkit-box-sizing: border-box;
@@ -302,6 +302,12 @@ h1, h2, h3, h4, p, span, a {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .Menu #logo {
   display: block;

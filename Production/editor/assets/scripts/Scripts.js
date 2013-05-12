@@ -214,7 +214,7 @@ roomPricesCalculated[5] = 0.0 ;
 	}
 		
 	function addRoom(name, id) {
-		var room = "<div id='"+ id +"' class='drag ui-widget-content draggable' style='position:relative; left:2510px; top:2510px; float:left;'> \
+		var room = "<div id='"+ id +"' class='drag ui-widget-content draggable' style='position:absolute; left:2510px; top:2510px; float:left;'> \
 		<div class='info'> \
 			<div class='table'> \
 				<div class='table-cell'>\
@@ -241,6 +241,7 @@ roomPricesCalculated[5] = 0.0 ;
     CalculateWholeSum();
 
 	}
+
 
 	function CalculateWholeSum()
     {
