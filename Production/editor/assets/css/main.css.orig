@@ -89,6 +89,7 @@ h1, h2, h3, h4, p, span, a {
   background-color: transparent;
 }
 
+<<<<<<< HEAD:Production/editor/assets/css/main.css
 #sauna {
   min-width: 200px;
   min-height: 100px;
@@ -124,7 +125,15 @@ h1, h2, h3, h4, p, span, a {
 }
 
 #livingroom-solo {
+  min-width: 300px;
+  min-height: 200px;
   background-image: url("../roomplans/livingroom/solo.png");
+=======
+#living-room {
+  width: 300px;
+  height: 200px;
+  background-image: url("../roomplans/LIVINGROOM_FULL.png");
+>>>>>>> 66dbbede90e7c8f278cf417d33ef6444f8e40b41:editor/css/main.css
   background-size: 300px 200px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -138,11 +147,19 @@ h1, h2, h3, h4, p, span, a {
   background-color: transparent;
 }
 
+<<<<<<< HEAD:Production/editor/assets/css/main.css
 #livingroom-kitchen {
   min-width: 400px;
   min-height: 225px;
   background-image: url("../roomplans/livingroom/kitchen.png");
   background-size: 400px 225px;
+=======
+#bathroom {
+  width: 125px;
+  height: 125px;
+  background-image: url("../roomplans/BATHROOM_2.png");
+  background-size: 125px 125px;
+>>>>>>> 66dbbede90e7c8f278cf417d33ef6444f8e40b41:editor/css/main.css
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -155,10 +172,17 @@ h1, h2, h3, h4, p, span, a {
   background-color: transparent;
 }
 
+<<<<<<< HEAD:Production/editor/assets/css/main.css
 #bedroom-master {
   width: 250px;
   height: 175px;
   background-image: url("../roomplans/bedroom/master.png");
+=======
+#bedroom {
+  width: 250px;
+  height: 175px;
+  background-image: url("../roomplans/BEDROOM_FULL_2.png");
+>>>>>>> 66dbbede90e7c8f278cf417d33ef6444f8e40b41:editor/css/main.css
   background-size: 250px 175px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -172,11 +196,22 @@ h1, h2, h3, h4, p, span, a {
   background-color: transparent;
 }
 
+<<<<<<< HEAD:Production/editor/assets/css/main.css
 #bedroom-small {
   width: 150px;
   height: 175px;
   background-image: url("../roomplans/bedroom/small.png");
   background-size: 150px 175px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
 }
 
 #shower {
@@ -201,8 +236,20 @@ h1, h2, h3, h4, p, span, a {
   height: 125px;
   background-image: url("../roomplans/bathroom/bath.png");
   background-size: 125px 125px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
 }
 
+=======
+>>>>>>> 66dbbede90e7c8f278cf417d33ef6444f8e40b41:editor/css/main.css
 .sandbox {
   width: auto;
   height: 100%;
@@ -402,6 +449,17 @@ h1, h2, h3, h4, p, span, a {
 }
 .Menu .button.add-bedroom span {
   background-position: -40px -40px;
+}
+<<<<<<< HEAD:Production/editor/assets/css/main.css
+.Menu .button.add-garage span {
+  background-position: 0px -120px;
+}
+.Menu .button.add-sauna span {
+  background-position: -40px -120px;
+=======
+.Menu .button:hover {
+  opacity: 0.7;
+>>>>>>> 66dbbede90e7c8f278cf417d33ef6444f8e40b41:editor/css/main.css
 }
 
 #wrapper {
